@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj": {}
+    "D:\\dev\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj": {}
   },
   "projects": {
-    "D:\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj": {
+    "D:\\dev\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj",
+        "projectUniqueName": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj",
         "projectName": "EMSBackend",
-        "projectPath": "D:\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj",
+        "projectPath": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj",
         "packagesPath": "C:\\Users\\Muhammad Shahzeel\\.nuget\\packages\\",
-        "outputPath": "D:\\Employee Management System\\backend\\EMSBackend\\obj\\",
+        "outputPath": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

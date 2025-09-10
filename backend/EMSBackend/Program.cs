@@ -1,4 +1,7 @@
 using EMSBackend.Data;
+using EMSBackend.Interfaces;
+using EMSBackend.Models;
+using EMSBackend.Repositories;
 using Microsoft.EntityFrameworkCore;
 using Scalar.AspNetCore;
 
@@ -16,6 +19,9 @@ var connectionString =
 
 builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(connectionString));
+
+// dependency inject for department
+builder.Services.AddScoped<IRepository<Department>, Repository<Department>>();
 
 
 var app = builder.Build();
