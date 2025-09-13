@@ -1,13 +1,24 @@
 import { Component, signal } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatSlideToggleModule } from '@angular/material/slide-toggle';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2 } from 'lucide-angular';
+
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet,MatSlideToggleModule,],
+
+  imports: [RouterOutlet, RouterLink, LucideAngularModule, RouterLinkActive],
   templateUrl: './app.html',
   styleUrl: './app.css'
 })
 export class App {
-  protected readonly title = signal('EMSFrontend');
+  protected readonly title = signal('EMS');
+    readonly TextAlignJustify = TextAlignJustify;
+    readonly LayoutDashboard = LayoutDashboard;
+    readonly Building2 = Building2;
+
+     isSidebarOpen = true;
+
+  toggleSidebar() {
+    this.isSidebarOpen = !this.isSidebarOpen;
+  }
 }
