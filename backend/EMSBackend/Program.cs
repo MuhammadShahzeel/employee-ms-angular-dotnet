@@ -22,6 +22,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 
 // dependency inject for department
 builder.Services.AddScoped<IRepository<Department>, Repository<Department>>();
+// dependency inject for employee
+builder.Services.AddScoped<IRepository<Employee>, Repository<Employee>>();
 
 
 var app = builder.Build();
@@ -37,7 +39,6 @@ app.UseHttpsRedirection();
 app.UseCors(x => x
     .AllowAnyMethod()                
     .AllowAnyHeader()                
-             
     .SetIsOriginAllowed(origin => true) 
                                         
 );
