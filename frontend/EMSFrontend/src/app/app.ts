@@ -1,6 +1,6 @@
 import { Component, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2 } from 'lucide-angular';
+import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users } from 'lucide-angular';
 
 
 @Component({
@@ -15,6 +15,7 @@ export class App {
     readonly TextAlignJustify = TextAlignJustify;
     readonly LayoutDashboard = LayoutDashboard;
     readonly Building2 = Building2;
+    readonly Users = Users;
 
      isSidebarOpen = true;
 

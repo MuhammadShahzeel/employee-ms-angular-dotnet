@@ -1,4 +1,4 @@
-import { Component, inject } from '@angular/core';
+import { Component, inject, OnInit } from '@angular/core';
 import { LucideAngularModule, Pencil, Trash2, LoaderCircle, X } from 'lucide-angular'; // Loader icon
 import { FormsModule } from '@angular/forms';
 import { HttpService } from '../../services/http';
@@ -10,7 +10,7 @@ import { IDepartment } from '../../types/IDepartment';
   templateUrl: './departments.html',
   styleUrl: './departments.css'
 })
-export class Departments {
+export class Departments implements OnInit {
 
   readonly Pencil = Pencil;
   readonly Trash2 = Trash2;
