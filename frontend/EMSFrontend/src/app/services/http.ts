@@ -36,4 +36,8 @@ addEmployee(employee: IEmployee) {
 deleteEmployee(id: number) {
   return this.http.delete(`${environment.apiUrl}/api/Employee/${id}`);}
   
+  updateEmployee(id: number, employee: IEmployee) {
+    return this.http.put(`${environment.apiUrl}/api/Employee/${id}`, employee);
+  }
 }
+

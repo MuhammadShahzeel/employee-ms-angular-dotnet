@@ -41,9 +41,11 @@ readonly Pencil = Pencil;
     this.isModalOpen = false;
     this.employeeForm.reset({
        id: 0,   
-  
     });
     this.editId = 0;
+      this.employeeForm.get('gender')?.enable();
+      this.employeeForm.get('joiningDate')?.enable();
+      this.employeeForm.get('dateOfBirth')?.enable();
   }
 
 
@@ -76,26 +78,36 @@ getEmployees() {
   }
 
   editEmployee(employee: IEmployee) {
-    // this.DepartmentName = department.name;
-    // this.editId = department.id;
     
-    // this.openModal();
+  
+    this.editId = employee.id;
+    console.log(employee);
+    
+    this.employeeForm.patchValue(
+      employee
+    );
+     this.employeeForm.get('gender')?.disable();
+     this.employeeForm.get('joiningDate')?.disable();
+     this.employeeForm.get('dateOfBirth')?.disable();
+
+
+    this.openModal();
     
     
 
   }
   updateEmployee(){
-    // this.httpService.updateDepartment(this.editId,this.DepartmentName).subscribe({
-    //   next:()=>{
-    //     this.getEmployees();
-    //     alert('Department updated successfully');
-    //     this.closeModal();
-    //     this.editId = 0;
-    //   },
-    //   error:()=>{
-    //     alert('Failed to update department');
-    //   }
-    // });
+    this.httpService.updateEmployee(this.editId,this.employeeForm.value).subscribe({
+      next:()=>{
+        this.getEmployees();
+        alert('Employee updated successfully');
+        this.closeModal();
+        this.editId = 0;
+      },
+      error:()=>{
+        alert('Failed to update employee');
+      }
+    });
 
   }
   getDepartments() {
