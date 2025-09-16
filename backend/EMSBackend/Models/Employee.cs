@@ -13,8 +13,8 @@ namespace EMSBackend.Models
         [ForeignKey(nameof(Department))]
         public int? DepartmentId { get; set; }
         public Department? Department { get; set; }
-        public DateTime JoiningDate { get; set; }
-        public DateTime LastWorkingDate { get; set; }
+        public DateOnly JoiningDate { get; set; }
+        public DateOnly LastWorkingDate { get; set; }
         public DateOnly DateOfBirth { get; set; }
     }
 }
