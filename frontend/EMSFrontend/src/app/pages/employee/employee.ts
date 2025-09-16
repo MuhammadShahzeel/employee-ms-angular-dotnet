@@ -40,9 +40,8 @@ readonly Pencil = Pencil;
   closeModal() {
     this.isModalOpen = false;
     this.employeeForm.reset({
-      gender: null, // reset default
-      departmentId: null, // reset default
-      jobTitle: null // reset default
+       id: 0,   
+  
     });
     this.editId = 0;
   }
@@ -114,15 +113,15 @@ getEmployees() {
 }
 
   deleteEmployee(id: number) {
-    // this.httpService.deleteDepartment(id).subscribe({
-    //   next: () => {
-    //     this.getEmployees();
-    //     alert('Department deleted successfully');
-    //   },
-    //   error: () => {
-    //     alert('Failed to delete department');
-    //   }
-    // });
+    this.httpService.deleteEmployee(id).subscribe({
+      next: () => {
+        this.getEmployees();
+        alert('Employee deleted successfully');
+      },
+      error: () => {
+        alert('Failed to delete employee');
+      }
+    });
   }
 
   ngOnInit() {

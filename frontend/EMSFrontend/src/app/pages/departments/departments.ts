@@ -45,6 +45,8 @@ getDepartments() {
       },
       error: () => {
         this.loading = false; // stop loader on error too
+        alert('Failed to fetch departments');
+        
       }
     });
 

@@ -33,5 +33,7 @@ addEmployee(employee: IEmployee) {
   return this.http.post(`${environment.apiUrl}/api/Employee`, employee);
 }
 
+deleteEmployee(id: number) {
+  return this.http.delete(`${environment.apiUrl}/api/Employee/${id}`);}
   
 }
