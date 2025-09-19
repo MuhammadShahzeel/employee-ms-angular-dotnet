@@ -1,5 +1,21 @@
 [
   {
+    "ContainingType": "EMSBackend.Controllers.AuthController",
+    "Method": "Login",
+    "RelativePath": "api/Auth/register",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "authDto",
+        "Type": "EMSBackend.Dtos.AuthDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/Department",

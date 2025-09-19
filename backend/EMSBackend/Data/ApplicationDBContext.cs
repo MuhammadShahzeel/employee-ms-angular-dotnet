@@ -1,9 +1,11 @@
 ﻿using EMSBackend.Models;
+using Microsoft.AspNetCore.Identity.EntityFrameworkCore;
 using Microsoft.EntityFrameworkCore;
 
 namespace EMSBackend.Data
 {
-    public class ApplicationDBContext:DbContext
+    public class ApplicationDBContext: IdentityDbContext<User>
+
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
         {
@@ -12,6 +14,8 @@ namespace EMSBackend.Data
         }
         public DbSet< Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
+ 
+
 
     }
 }

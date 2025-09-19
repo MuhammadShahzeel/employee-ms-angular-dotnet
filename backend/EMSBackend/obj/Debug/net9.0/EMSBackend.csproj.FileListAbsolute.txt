@@ -329,3 +329,9 @@ D:\dev\Employee Management System\backend\EMSBackend\obj\Debug\net9.0\refint\EMS
 D:\dev\Employee Management System\backend\EMSBackend\obj\Debug\net9.0\EMSBackend.pdb
 D:\dev\Employee Management System\backend\EMSBackend\obj\Debug\net9.0\EMSBackend.genruntimeconfig.cache
 D:\dev\Employee Management System\backend\EMSBackend\obj\Debug\net9.0\ref\EMSBackend.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.Internal.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.AspNetCore.Cryptography.KeyDerivation.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.AspNetCore.Identity.EntityFrameworkCore.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.Extensions.Identity.Core.dll
+D:\dev\Employee Management System\backend\EMSBackend\bin\Debug\net9.0\Microsoft.Extensions.Identity.Stores.dll

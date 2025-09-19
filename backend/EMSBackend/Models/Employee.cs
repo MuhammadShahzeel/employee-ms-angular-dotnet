@@ -16,5 +16,11 @@ namespace EMSBackend.Models
         public DateOnly JoiningDate { get; set; }
         public DateOnly LastWorkingDate { get; set; }
         public DateOnly DateOfBirth { get; set; }
+
+
+        // Foreign key to Identity User
+        public string? UserId { get; set; }
+        public User User { get; set; }
+
     }
 }
