@@ -16,40 +16,46 @@
     </div>
   }
 
-  <!-- Table Card -->
+  <!-- Table or Empty State -->
   @else {
-    <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
-      <table class="w-full text-sm text-left">
-        <thead class="bg-gray-50 border-b border-gray-200">
-          <tr>
-            <th class="px-6 py-4 text-gray-700 font-semibold">#</th>
-            <th class="px-6 py-4 text-gray-700 font-semibold">ID</th>
-            <th class="px-6 py-4 text-gray-700 font-semibold">Name</th>
-            <th class="px-6 py-4 text-gray-700 font-semibold text-center">Actions</th>
-          </tr>
-        </thead>
-
-        <tbody class="divide-y divide-gray-100">
-          @for (item of departments; track item.id) {
-
-            <tr class="hover:bg-blue-50/40 transition">
-              <td class="px-6 py-4 text-gray-800 font-medium">{{ $index + 1 }}</td>
-              <td class="px-6 py-4 text-gray-800 font-medium">{{ item.id }}</td>
-              <td class="px-6 py-4 text-gray-700">{{ item.name }}</td>
-              <td class="px-6 py-4 flex justify-center gap-3">
-                <button (click)="editDepartment(item)"  class="p-2 rounded-lg hover:bg-blue-100 text-blue-600 transition">
-                  <lucide-icon [img]="Pencil" class="w-5 h-5"></lucide-icon>
-          
-                </button>
-                <button (click)="deleteDepartment(item.id)" class="p-2 rounded-lg hover:bg-red-100 text-red-600 transition">
-                  <lucide-icon [img]="Trash2" class="w-5 h-5"></lucide-icon>
-                </button>
-              </td>
+    @if (departments.length > 0) {
+      <div class="bg-white shadow-lg rounded-xl overflow-hidden border border-gray-100">
+        <table class="w-full text-sm text-left">
+          <thead class="bg-gray-50 border-b border-gray-200">
+            <tr>
+              <th class="px-6 py-4 text-gray-700 font-semibold">#</th>
+              <th class="px-6 py-4 text-gray-700 font-semibold">ID</th>
+              <th class="px-6 py-4 text-gray-700 font-semibold">Name</th>
+              <th class="px-6 py-4 text-gray-700 font-semibold text-center">Actions</th>
             </tr>
-          }
-        </tbody>
-      </table>
-    </div>
+          </thead>
+
+          <tbody class="divide-y divide-gray-100">
+            @for (item of departments; track item.id) {
+              <tr class="hover:bg-blue-50/40 transition">
+                <td class="px-6 py-4 text-gray-800 font-medium">{{ $index + 1 }}</td>
+                <td class="px-6 py-4 text-gray-800 font-medium">{{ item.id }}</td>
+                <td class="px-6 py-4 text-gray-700">{{ item.name }}</td>
+                <td class="px-6 py-4 flex justify-center gap-3">
+                  <button (click)="editDepartment(item)" class="p-2 rounded-lg hover:bg-blue-100 text-blue-600 transition">
+                    <lucide-icon [img]="Pencil" class="w-5 h-5"></lucide-icon>
+                  </button>
+                  <button (click)="deleteDepartment(item.id)" class="p-2 rounded-lg hover:bg-red-100 text-red-600 transition">
+                    <lucide-icon [img]="Trash2" class="w-5 h-5"></lucide-icon>
+                  </button>
+                </td>
+              </tr>
+            }
+          </tbody>
+        </table>
+      </div>
+    } @else {
+      <!-- Empty State -->
+      <div class="flex flex-col items-center justify-center py-16 bg-white rounded-xl shadow-lg border border-gray-100">
+        <lucide-icon [img]="X" class="w-10 h-10 text-gray-400 mb-3"></lucide-icon>
+        <p class="text-gray-500 text-sm">No departments found. Try adding one!</p>
+      </div>
+    }
   }
 </div>
 
