@@ -1,10 +1,9 @@
 ﻿namespace EMSBackend.Dtos
 {
-    public class AuthTokenDto
+    public class LoginTokenDto
     {
-      
+        public string Id { get; set; }
         public string Email { get; set; }
         public string Token { get; set; }
-       
     }
 }

@@ -4,6 +4,7 @@ using EMSBackend.Mappers;
 using EMSBackend.Models;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
+using Microsoft.EntityFrameworkCore;
 
 namespace EMSBackend.Controllers
 {
@@ -23,8 +24,7 @@ namespace EMSBackend.Controllers
         }
         [HttpPost("register")]
 
-
-        public async Task<IActionResult> Login([FromBody] AuthDto authDto)
+        public async Task<IActionResult> Register([FromBody] AuthDto authDto)
         {
 
             try
@@ -65,6 +65,46 @@ namespace EMSBackend.Controllers
             }
 
         }
+
+
+        [HttpPost("login")]
+        public async Task<IActionResult> Login([FromBody] AuthDto loginDto)
+        {
+            try
+            {
+                if (!ModelState.IsValid)
+                    return BadRequest(ModelState);
+
+
+                var user = await _userManager.FindByEmailAsync(loginDto.Email);
+
+
+                if (user == null)
+                    return Unauthorized("Invalid email or password"); // User exist nahi karta
+
+               
+                var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
+
+           
+
+                if (!result.Succeeded)
+                {
+                    return Unauthorized("Invalid email or password"); // Password match nahi hua
+                }
+
+                var token = _tokenService.CreateToken(user); 
+
+                var userDto = user.ToLoginUserDto(token);    
+                return Ok(userDto);                          
+            }
+            catch (Exception e)
+            {
+                return StatusCode(500, e); 
+            }
+        }
+
+
+
 
     }
 }

@@ -12,14 +12,14 @@ namespace EMSBackend.Mappers
               
                 Email = dto.Email,
                 // dont use Password here, it will be set by UserManager in controller because it hased and salted automatically
-                   UserName = dto.Email // 👈 yahan UserName me email dal diya
+                   UserName = dto.Email //  yahan UserName me email dal diya
             };
         }
 
 
-        public static AuthTokenDto ToNewUserDto(this User user, string token)
+        public static RegisterTokenDto ToNewUserDto(this User user, string token)
         {
-            return new AuthTokenDto
+            return new RegisterTokenDto
             {
                 
                 Email = user.Email,
@@ -27,7 +27,15 @@ namespace EMSBackend.Mappers
             };
         }
 
-
+        public static LoginTokenDto ToLoginUserDto(this User user, string token)
+        {
+            return new LoginTokenDto
+            {
+                Id= user.Id,
+                Email = user.Email,
+                Token = token
+            };
+        }
     }
 
 }
