@@ -1,7 +1,7 @@
 ﻿
 using EMSBackend.Interfaces;
 using EMSBackend.Models;
-
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMSBackend.Controllers
@@ -17,12 +17,15 @@ namespace EMSBackend.Controllers
             _employeeRepository = employeeRepository;
         }
         [HttpGet]
+        [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Get()
         {
             return Ok(await _employeeRepository.GetAllAsync());
         }
 
+
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddEmployee([FromBody] Employee model)
         {
             await _employeeRepository.AddAsync(model);
@@ -31,6 +34,7 @@ namespace EMSBackend.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> UpdateEmployee( int id, [FromBody] Employee model)
         {
             var employee = await _employeeRepository.GetByIdAsync(id);
@@ -47,6 +51,7 @@ namespace EMSBackend.Controllers
 
     
      [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteEmployee(int id)
         {
             await _employeeRepository.DeleteAsync(id);

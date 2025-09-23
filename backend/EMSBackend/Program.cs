@@ -2,6 +2,7 @@ using EMSBackend.Data;
 using EMSBackend.Interfaces;
 using EMSBackend.Models;
 using EMSBackend.Repositories;
+using EMSBackend.Seed;
 using EMSBackend.Services;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Identity;
@@ -67,6 +68,12 @@ builder.Services.AddAuthentication(options =>
 
 
 var app = builder.Build();
+using (var scope = app.Services.CreateScope())
+{
+    var roleManager = scope.ServiceProvider.GetRequiredService<RoleManager<IdentityRole>>();
+    await RoleSeeder.SeedRolesAsync(roleManager);
+}
+
 
 // Configure the HTTP request pipeline.
 if (app.Environment.IsDevelopment())

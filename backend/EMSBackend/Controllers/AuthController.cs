@@ -40,11 +40,11 @@ namespace EMSBackend.Controllers
 
                 if (createdUser.Succeeded)
                 {
-                    //var roleResult = await _userManager.AddToRoleAsync(appUser, "User"); // "User" role assign kiya
+                    await _userManager.AddToRoleAsync(appUser, "Admin"); // "User" role assign kiya
 
                     //if (roleResult.Succeeded)
                     //{
-                    var token = _tokenService.CreateToken(appUser); // JWT token banaya
+                    var token = await _tokenService.CreateTokenAsync(appUser); // JWT token banaya
                     var newUserDto = appUser.ToNewUserDto(token);   // DTO banaya response ke liye
                     return Ok(newUserDto);                          // 200 OK response with token
                                                                     //}
@@ -55,13 +55,13 @@ namespace EMSBackend.Controllers
                 }
                 else
                 {
-                    return StatusCode(500, createdUser.Errors); // User create nahi ho saka
+                    return StatusCode(500, new { message = createdUser.Errors }); // User create nahi ho saka
                 }
             }
 
             catch (Exception e)
             {
-                return StatusCode(500, e); // Unexpected error handle
+                return StatusCode(500,new {message = e.Message } ); // Unexpected error handle
             }
 
         }
@@ -80,7 +80,7 @@ namespace EMSBackend.Controllers
 
 
                 if (user == null)
-                    return Unauthorized("Invalid email or password"); // User exist nahi karta
+                    return Unauthorized(new { message = "Invalid email or password" }); // User exist nahi karta
 
                
                 var result = await _signInManager.CheckPasswordSignInAsync(user, loginDto.Password, false);
@@ -89,17 +89,17 @@ namespace EMSBackend.Controllers
 
                 if (!result.Succeeded)
                 {
-                    return Unauthorized("Invalid email or password"); // Password match nahi hua
+                    return Unauthorized(new { message = "Invalid email or password" }); // Password match nahi hua
                 }
 
-                var token = _tokenService.CreateToken(user); 
+                var token = await _tokenService.CreateTokenAsync(user); 
 
                 var userDto = user.ToLoginUserDto(token);    
                 return Ok(userDto);                          
             }
             catch (Exception e)
             {
-                return StatusCode(500, e); 
+                return StatusCode(500, new {message =  e.Message }); 
             }
         }
 
