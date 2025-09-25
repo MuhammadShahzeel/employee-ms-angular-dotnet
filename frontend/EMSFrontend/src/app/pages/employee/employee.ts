@@ -136,7 +136,7 @@ getEmployees() {
     });
   }
 
-  ngOnInit() {
+  ngOnInit() : void {
     this.getEmployees();
     this.getDepartments();
 
