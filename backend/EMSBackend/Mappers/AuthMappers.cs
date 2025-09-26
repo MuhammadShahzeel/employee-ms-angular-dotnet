@@ -17,23 +17,25 @@ namespace EMSBackend.Mappers
         }
 
 
-        public static RegisterTokenDto ToNewUserDto(this User user, string token)
+        public static RegisterTokenDto ToNewUserDto(this User user, string token,string role)
         {
             return new RegisterTokenDto
             {
                 
                 Email = user.Email,
-                Token = token
+                Token = token,
+                Role = role
             };
         }
 
-        public static LoginTokenDto ToLoginUserDto(this User user, string token)
+        public static LoginTokenDto ToLoginUserDto(this User user, string token,string role)
         {
             return new LoginTokenDto
             {
                 Id= user.Id,
                 Email = user.Email,
-                Token = token
+                Token = token,
+                Role = role
             };
         }
     }

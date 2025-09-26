@@ -1,5 +1,6 @@
 ﻿using EMSBackend.Interfaces;
 using EMSBackend.Models;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace EMSBackend.Controllers
 {
@@ -16,6 +17,7 @@ namespace EMSBackend.Controllers
         }
 
         [HttpPost]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddDepartment([FromBody] Department model)
         {
             await _departmentRepository.AddAsync(model);
@@ -24,6 +26,7 @@ namespace EMSBackend.Controllers
         }
 
         [HttpPut("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> updateDepartment(int id, [FromBody] Department model)
         {
             var department = await _departmentRepository.GetByIdAsync(id);
@@ -35,6 +38,7 @@ namespace EMSBackend.Controllers
         }
 
         [HttpGet]
+        [Authorize]
         public async Task<IActionResult> getAllDepartment()
         {
             var list = await _departmentRepository.GetAllAsync();
@@ -43,6 +47,7 @@ namespace EMSBackend.Controllers
         }
 
         [HttpDelete("{id}")]
+        [Authorize(Roles = "Admin")]
         public async Task<IActionResult> DeleteDepartment(int id)
         {
             await _departmentRepository.DeleteAsync(id);

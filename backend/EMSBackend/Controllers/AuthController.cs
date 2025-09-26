@@ -40,18 +40,21 @@ namespace EMSBackend.Controllers
 
                 if (createdUser.Succeeded)
                 {
-                    await _userManager.AddToRoleAsync(appUser, "Admin"); // "User" role assign kiya
+                    await _userManager.AddToRoleAsync(appUser, "Employee"); // "User" role assign kiya
 
                     //if (roleResult.Succeeded)
                     //{
                     var token = await _tokenService.CreateTokenAsync(appUser); // JWT token banaya
-                    var newUserDto = appUser.ToNewUserDto(token);   // DTO banaya response ke liye
+                                                                               // jo role tum Register ke waqt assign karte ho wahi uthao
+                    var roles = await _userManager.GetRolesAsync(appUser); // yeh current user k role nikale ga identity sy array deta hy to hmny first aur default lgayab
+                    var role = roles.FirstOrDefault();     // ek hi role milega (Admin ya Employee)
+                    var newUserDto = appUser.ToNewUserDto(token,role);   // DTO banaya response ke liye
                     return Ok(newUserDto);                          // 200 OK response with token
                                                                     //}
                                                                     //else
                                                                     //{
                                                                     //    return StatusCode(500, roleResult.Errors); // Role assign mein error
-                                                                    //}
+                                                                  
                 }
                 else
                 {
@@ -92,9 +95,11 @@ namespace EMSBackend.Controllers
                     return Unauthorized(new { message = "Invalid email or password" }); // Password match nahi hua
                 }
 
-                var token = await _tokenService.CreateTokenAsync(user); 
+                var token = await _tokenService.CreateTokenAsync(user);
+                var roles = await _userManager.GetRolesAsync(user); // yeh current user k role nikale ga identity sy array deta hy to hmny first aur default lgayab
+                var role = roles.FirstOrDefault();     // ek hi role mileg
 
-                var userDto = user.ToLoginUserDto(token);    
+                var userDto = user.ToLoginUserDto(token,role);    
                 return Ok(userDto);                          
             }
             catch (Exception e)
