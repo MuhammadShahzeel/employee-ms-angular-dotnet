@@ -1,40 +1,73 @@
 <div class="h-screen flex flex-col bg-gray-100">
   <!-- Navbar -->
-  <header class="bg-white/80 backdrop-blur-md border-b border-gray-200 
-                 text-gray-800 flex items-center px-6 py-4 fixed top-0 left-0 right-0 z-50 shadow-sm">
-    <button (click)="toggleSidebar()" 
-            class="mr-4 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
-      <lucide-icon [img]="TextAlignJustify" class="w-6 h-6"></lucide-icon>
-    </button>
-    <h1 class="text-lg sm:text-xl font-semibold tracking-tight">EMS</h1>
+  <header
+    class="bg-white/80 backdrop-blur-md border-b border-gray-200 
+           text-gray-800 flex items-center justify-between px-6 py-4 
+           fixed top-0 left-0 right-0 z-50 shadow-sm">
+
+    <!-- Left side (sidebar toggle + title) -->
+    <div class="flex items-center">
+      @if (authService.isLoggedIn) {
+        <button (click)="toggleSidebar()" 
+                class="mr-4 p-2 rounded-lg hover:bg-gray-100 transition-colors duration-300">
+          <lucide-icon [img]="TextAlignJustify" class="w-6 h-6"></lucide-icon>
+        </button>
+      }
+      <h1 class="text-lg sm:text-xl font-semibold tracking-tight">EMS</h1>
+    </div>
+
+    <!-- Right side (Login/Logout button based on isLoggedIn) -->
+    <div>
+      @if (authService.isLoggedIn) {
+        <!-- Logout button -->
+        <button (click)="logout()" 
+                class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white 
+                       bg-red-600 rounded-lg shadow 
+                       hover:bg-red-700 transition-colors duration-300">
+          <lucide-icon [img]="LogOut" class="w-5 h-5"></lucide-icon>
+          <span>Logout</span>
+        </button>
+      } @else {
+        <!-- Login button -->
+        <a routerLink="/login"
+           class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white 
+                  bg-gray-800 rounded-lg shadow 
+                  hover:bg-gray-700 transition-colors duration-300">
+          <lucide-icon [img]="LogIn" class="w-5 h-5"></lucide-icon>
+          <span>Login</span>
+        </a>
+      }
+    </div>
   </header>
 
   <!-- Sidebar + Content -->
   <div class="flex flex-1 pt-16">
-    <!-- Sidebar -->
-    <div [class.w-64]="isSidebarOpen" [class.w-0]="!isSidebarOpen"
-         class="bg-white shadow-lg transition-all duration-300 overflow-hidden border-r border-gray-100">
-      <nav class="p-5 space-y-2">
-        <a routerLink="/dashboard" routerLinkActive="bg-gray-100 text-gray-900"
-           class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                  rounded-lg px-3 py-2 transition-colors duration-200">
-          <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
-          <span class="text-sm font-medium">Dashboard</span>
-        </a>
-        <a routerLink="/departments" routerLinkActive="bg-gray-100 text-gray-900"
-           class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                  rounded-lg px-3 py-2 transition-colors duration-200">
-          <lucide-icon [img]="Building2" class="w-5 h-5"></lucide-icon>
-          <span class="text-sm font-medium">Departments</span>
-        </a>
-        <a routerLink="/employee" routerLinkActive="bg-gray-100 text-gray-900"
-           class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                  rounded-lg px-3 py-2 transition-colors duration-200">
-          <lucide-icon [img]="Users" class="w-5 h-5"></lucide-icon>
-          <span class="text-sm font-medium">Employees</span>
-        </a>
-      </nav>
-    </div>
+    @if (authService.isLoggedIn) {
+      <!-- Sidebar -->
+      <div [class.w-64]="isSidebarOpen" [class.w-0]="!isSidebarOpen"
+           class="bg-white shadow-lg transition-all duration-300 overflow-hidden border-r border-gray-100">
+        <nav class="p-5 space-y-2">
+          <a routerLink="/dashboard" routerLinkActive="bg-gray-100 text-gray-900"
+             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                    rounded-lg px-3 py-2 transition-colors duration-200">
+            <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
+            <span class="text-sm font-medium">Dashboard</span>
+          </a>
+          <a routerLink="/departments" routerLinkActive="bg-gray-100 text-gray-900"
+             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                    rounded-lg px-3 py-2 transition-colors duration-200">
+            <lucide-icon [img]="Building2" class="w-5 h-5"></lucide-icon>
+            <span class="text-sm font-medium">Departments</span>
+          </a>
+          <a routerLink="/employee" routerLinkActive="bg-gray-100 text-gray-900"
+             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                    rounded-lg px-3 py-2 transition-colors duration-200">
+            <lucide-icon [img]="Users" class="w-5 h-5"></lucide-icon>
+            <span class="text-sm font-medium">Employees</span>
+          </a>
+        </nav>
+      </div>
+    }
 
     <!-- Main Content -->
     <main class="flex-1 p-6 bg-gray-50">

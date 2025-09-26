@@ -1,5 +1,5 @@
 export interface IAuthToken {
     id: number;
-    Email: string;
-    Token: string;
+    email: string;
+    token: string;
 }

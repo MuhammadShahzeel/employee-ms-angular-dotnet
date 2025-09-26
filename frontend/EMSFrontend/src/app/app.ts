@@ -1,6 +1,7 @@
-import { Component, signal } from '@angular/core';
+import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users } from 'lucide-angular';
+import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users,  LogInIcon, LogOutIcon } from 'lucide-angular';
+import { Auth } from './services/auth';
 
 
 @Component({
@@ -16,10 +17,18 @@ export class App {
     readonly LayoutDashboard = LayoutDashboard;
     readonly Building2 = Building2;
     readonly Users = Users;
+    readonly LogIn = LogInIcon; 
+    readonly LogOut = LogOutIcon;
+    authService = inject(Auth);
 
      isSidebarOpen = true;
 
   toggleSidebar() {
     this.isSidebarOpen = !this.isSidebarOpen;
   }
+  logout() {
+    this.authService.logout();}
+
+    
+    
 }

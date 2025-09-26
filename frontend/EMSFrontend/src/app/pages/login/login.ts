@@ -2,6 +2,7 @@ import { Component, inject, OnInit } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 import { Eye, EyeClosed, LoaderCircle, LucideAngularModule } from 'lucide-angular';
 import { Auth } from '../../services/auth';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,6 +13,7 @@ import { Auth } from '../../services/auth';
 export class Login implements OnInit {
   fb = inject(FormBuilder);
   authService = inject(Auth);
+  router = inject(Router);
 
   loginForm!: FormGroup;
   loading = false;
@@ -33,6 +35,9 @@ export class Login implements OnInit {
         ]
       ]
     });
+    if (this.authService.isLoggedIn) {
+      this.router.navigate(['/dashboard']);
+    }
   }
 
   togglePassword() {
@@ -44,8 +49,10 @@ export class Login implements OnInit {
     this.authService.Login(this.loginForm.value).subscribe({
       next: (result) => {
         this.loading = false;
-        console.log(result);
+        this.authService.saveToken(result);
         alert('Login successful!');
+        this.router.navigate(['/dashboard']);
+        
       },
       error: (err:any) => {
         this.loading = false;
