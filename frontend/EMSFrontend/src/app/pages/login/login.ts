@@ -51,8 +51,12 @@ export class Login implements OnInit {
         this.loading = false;
         this.authService.saveToken(result);
         alert('Login successful!');
-        this.router.navigate(['/dashboard']);
-        
+        if(result.role === 'Admin'){
+          this.router.navigate(['/dashboard']);
+        }else{
+          this.router.navigate(['/employee-dashboard']);
+        }
+
       },
       error: (err:any) => {
         this.loading = false;

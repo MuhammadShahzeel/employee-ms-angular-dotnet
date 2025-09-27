@@ -25,6 +25,10 @@ export class Auth {
 get isLoggedIn() {
   return localStorage.getItem('token') ? true : false;
 }
+get isEmployee() {
+  return JSON.parse(localStorage.getItem('auth')!)?.role === 'Employee';
+}
+
 
 logout() {
   localStorage.removeItem('token');

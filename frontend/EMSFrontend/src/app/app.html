@@ -47,24 +47,35 @@
       <div [class.w-64]="isSidebarOpen" [class.w-0]="!isSidebarOpen"
            class="bg-white shadow-lg transition-all duration-300 overflow-hidden border-r border-gray-100">
         <nav class="p-5 space-y-2">
-          <a routerLink="/dashboard" routerLinkActive="bg-gray-100 text-gray-900"
-             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                    rounded-lg px-3 py-2 transition-colors duration-200">
-            <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
-            <span class="text-sm font-medium">Dashboard</span>
-          </a>
-          <a routerLink="/departments" routerLinkActive="bg-gray-100 text-gray-900"
-             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                    rounded-lg px-3 py-2 transition-colors duration-200">
-            <lucide-icon [img]="Building2" class="w-5 h-5"></lucide-icon>
-            <span class="text-sm font-medium">Departments</span>
-          </a>
-          <a routerLink="/employee" routerLinkActive="bg-gray-100 text-gray-900"
-             class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
-                    rounded-lg px-3 py-2 transition-colors duration-200">
-            <lucide-icon [img]="Users" class="w-5 h-5"></lucide-icon>
-            <span class="text-sm font-medium">Employees</span>
-          </a>
+          @if (authService.isEmployee) {
+            <a routerLink="/employee-dashboard" routerLinkActive="bg-gray-100 text-gray-900"
+               class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                      rounded-lg px-3 py-2 transition-colors duration-200">
+              <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
+              <span class="text-sm font-medium">Dashboard</span>
+            </a>
+          }
+       @else{
+         <a routerLink="/dashboard" routerLinkActive="bg-gray-100 text-gray-900"
+            class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                   rounded-lg px-3 py-2 transition-colors duration-200">
+           <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
+           <span class="text-sm font-medium">Dashboard</span>
+         </a>
+         <a routerLink="/departments" routerLinkActive="bg-gray-100 text-gray-900"
+            class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                   rounded-lg px-3 py-2 transition-colors duration-200">
+           <lucide-icon [img]="Building2" class="w-5 h-5"></lucide-icon>
+           <span class="text-sm font-medium">Departments</span>
+         </a>
+         <a routerLink="/employee" routerLinkActive="bg-gray-100 text-gray-900"
+            class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                   rounded-lg px-3 py-2 transition-colors duration-200">
+           <lucide-icon [img]="Users" class="w-5 h-5"></lucide-icon>
+           <span class="text-sm font-medium">Employees</span>
+         </a>
+
+       }
         </nav>
       </div>
     }
