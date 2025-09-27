@@ -2,6 +2,7 @@
 using EMSBackend.Interfaces;
 using EMSBackend.Models;
 using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
 
 namespace EMSBackend.Controllers
@@ -11,10 +12,19 @@ namespace EMSBackend.Controllers
     public class EmployeeController : ControllerBase
     {
         private readonly IRepository<Employee> _employeeRepository;
+        private readonly UserManager<User> _userManager;
+        private readonly RoleManager<IdentityRole> _roleManager;
 
-        public EmployeeController(IRepository<Employee> employeeRepository)
+        public EmployeeController(IRepository<Employee> employeeRepository,
+             UserManager<User> userManager,
+            RoleManager<IdentityRole> roleManager
+            
+            
+            )
         {
             _employeeRepository = employeeRepository;
+            _userManager = userManager;
+            _roleManager = roleManager;
         }
         [HttpGet]
         [Authorize(Roles ="Admin")]
@@ -28,8 +38,34 @@ namespace EMSBackend.Controllers
         [Authorize(Roles = "Admin")]
         public async Task<IActionResult> AddEmployee([FromBody] Employee model)
         {
+            // 1. Create Identity user
+            var user = new User
+            {
+                UserName = model.Email,   // ya model.Name agar username alag lena ho
+                Email = model.Email
+            };
+
+            var result = await _userManager.CreateAsync(user, "Employee@123"); // fixed password
+
+            if (!result.Succeeded)
+            {
+                return BadRequest(result.Errors);
+            }
+
+            // 2. Ensure Employee role exists
+            if (!await _roleManager.RoleExistsAsync("Employee"))
+            {
+                await _roleManager.CreateAsync(new IdentityRole("Employee"));
+            }
+
+            // 3. Assign Employee role
+            await _userManager.AddToRoleAsync(user, "Employee");
+
+            // 4. Save employee in custom Employee table with UserId
+            model.UserId = user.Id;   //  Identity user ka Id store
             await _employeeRepository.AddAsync(model);
             await _employeeRepository.SaveChangesAsync();
+
             return Ok();
         }
 
