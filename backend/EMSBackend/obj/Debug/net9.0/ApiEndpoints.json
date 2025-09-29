@@ -156,5 +156,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMSBackend.Controllers.ProfileController",
+    "Method": "UpdateProfile",
+    "RelativePath": "api/Profile/Profile",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EMSBackend.Dtos.ProfileDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]

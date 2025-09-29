@@ -1,6 +1,7 @@
 ﻿using EMSBackend.Data;
 using EMSBackend.Interfaces;
 using Microsoft.EntityFrameworkCore;
+using System.Linq.Expressions;
 
 namespace EMSBackend.Repositories
 {
@@ -47,6 +48,11 @@ namespace EMSBackend.Repositories
         public async Task<int> SaveChangesAsync()
         {
             return await _dBContext.SaveChangesAsync();
+        }
+
+        public async Task<T?> FindAsync(Expression<Func<T, bool>> predicate)
+        {
+            return await dbSet.FirstOrDefaultAsync(predicate);
         }
     }
 }
