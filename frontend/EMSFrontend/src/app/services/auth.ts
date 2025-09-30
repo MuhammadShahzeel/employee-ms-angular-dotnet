@@ -10,6 +10,7 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class Auth {
+ 
     http = inject(HttpClient);
     router = inject(Router);
     
