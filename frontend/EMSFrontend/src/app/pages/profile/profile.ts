@@ -28,9 +28,9 @@ export class Profile implements OnInit {
 
   ngOnInit(): void {
     this.profileForm = this.fb.group({
-      userId: [this.authService.AuthDetail?.id || ''], // abhi dummy
+      userId: [this.authService.AuthDetail?.id || ''],
      name: ['', [Validators.required, Validators.minLength(3)]],
-      email: ['', [Validators.required, Validators.email]],
+   
       phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]],
       profileImage: [''],
      oldPassword: [

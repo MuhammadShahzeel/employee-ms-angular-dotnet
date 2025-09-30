@@ -33,15 +33,6 @@
       <lucide-icon [img]="LogOut" class="w-5 h-5"></lucide-icon>
       <span>Logout</span>
     </button>
-  } @else {
-    <!-- Login button -->
-    <a routerLink="/login"
-       class="flex items-center gap-2 px-4 py-2 text-sm font-medium text-white 
-              bg-gray-800 rounded-lg shadow 
-              hover:bg-gray-700 transition-colors duration-300">
-      <lucide-icon [img]="LogIn" class="w-5 h-5"></lucide-icon>
-      <span>Login</span>
-    </a>
   }
 </div>
 
@@ -55,6 +46,12 @@
            class="bg-white shadow-lg transition-all duration-300 overflow-hidden border-r border-gray-100">
         <nav class="p-5 space-y-2">
           @if (authService.isEmployee) {
+            <a routerLink="/profile" routerLinkActive="bg-gray-100 text-gray-900"
+               class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                      rounded-lg px-3 py-2 transition-colors duration-200">
+              <lucide-icon [img]="User" class="w-5 h-5"></lucide-icon>
+              <span class="text-sm font-medium">Profile</span>
+            </a>
             <a routerLink="/employee-dashboard" routerLinkActive="bg-gray-100 text-gray-900"
                class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
                       rounded-lg px-3 py-2 transition-colors duration-200">

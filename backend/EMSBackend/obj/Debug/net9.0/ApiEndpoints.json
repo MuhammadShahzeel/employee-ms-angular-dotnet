@@ -160,7 +160,7 @@
   {
     "ContainingType": "EMSBackend.Controllers.ProfileController",
     "Method": "UpdateProfile",
-    "RelativePath": "api/Profile/Profile",
+    "RelativePath": "api/Profile",
     "HttpMethod": "POST",
     "IsController": true,
     "Order": 0,

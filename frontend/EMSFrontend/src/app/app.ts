@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users,  LogInIcon, LogOutIcon } from 'lucide-angular';
+import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users,  LogInIcon, LogOutIcon, User } from 'lucide-angular';
 import { Auth } from './services/auth';
 
 
@@ -14,6 +14,9 @@ import { Auth } from './services/auth';
 export class App {
   protected readonly title = signal('EMS');
     readonly TextAlignJustify = TextAlignJustify;
+    readonly User = User;
+
+    
     readonly LayoutDashboard = LayoutDashboard;
     readonly Building2 = Building2;
     readonly Users = Users;
