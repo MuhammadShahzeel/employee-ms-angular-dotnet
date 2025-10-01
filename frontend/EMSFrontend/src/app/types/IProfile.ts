@@ -6,3 +6,10 @@ export interface IProfile {
   oldPassword: string;
   newPassword: string;
 }
+
+
+export interface IProfileResponse {
+  name: string;
+  phone: string;
+  profileImage: string;
+}

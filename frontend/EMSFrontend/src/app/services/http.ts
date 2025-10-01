@@ -3,7 +3,7 @@ import { inject, Injectable } from '@angular/core';
 import { IDepartment } from '../types/IDepartment';
 import { IEmployee } from '../types/IEmployee';
 import { environment } from '../../environments/environment';
-import { IProfile } from '../types/IProfile';
+import { IProfile, IProfileResponse } from '../types/IProfile';
 
 @Injectable({
   providedIn: 'root'
@@ -43,6 +43,9 @@ deleteEmployee(id: number) {
 
   updateProfile(profileDetails: IProfile) {
   return this.http.post(`${environment.apiUrl}/api/Profile`, profileDetails);
+}
+  getProfile(userId: string) {
+  return this.http.get<IProfileResponse>(`${environment.apiUrl}/api/Profile/${userId}`);
 }
 }
 

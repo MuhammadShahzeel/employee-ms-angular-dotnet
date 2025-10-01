@@ -21,14 +21,17 @@ export class Profile implements OnInit {
   loading = false;
   showOldPassword = false;
   showNewPassword = false;
+  
 
   readonly LoaderCircle = LoaderCircle;
   readonly eye = Eye;
   readonly eyeClosed = EyeClosed;
 
+
   ngOnInit(): void {
+    this.getProfile();
     this.profileForm = this.fb.group({
-      userId: [this.authService.AuthDetail?.id || ''],
+      userId: [ this.authService.AuthDetail?.id || ''],
      name: ['', [Validators.required, Validators.minLength(3)]],
    
       phone: ['', [Validators.required, Validators.pattern(/^[0-9]{10,15}$/)]],
@@ -58,6 +61,27 @@ export class Profile implements OnInit {
 
   toggleNewPassword() {
     this.showNewPassword = !this.showNewPassword;
+  }
+
+getProfile() {
+
+
+  
+    this.httpService.getProfile(this.authService.AuthDetail?.id || '').subscribe({
+      next: (res) => {
+        
+        this.profileForm.patchValue(
+          res
+         
+        );
+      },
+      error: (err) => {
+  
+        alert('Failed to load profile. Please try again.');
+    
+      }
+
+    });
   }
 
   updateProfile() {
