@@ -60,6 +60,24 @@ namespace EMSBackend.Controllers
             return Ok(new { message = "Profile updated successfully." });
         }
 
+        [Authorize]
+        [HttpGet("{id}")]
+        public async Task<IActionResult> GetProfile(string id)
+        {
+            var user = await _userManager.FindByIdAsync(id);
+            if (user == null)
+                return NotFound(new { message = "User does not exist." });
+
+            var employee = await _employeeRepo.FindAsync(e => e.UserId == id);
+            if (employee == null)
+                return NotFound(new { message = "Employee does not exist." });
+
+          
+            var profile = (user, employee).ToProfileResponseDto();
+
+            return Ok(profile);
+        }
+
 
     }
 }

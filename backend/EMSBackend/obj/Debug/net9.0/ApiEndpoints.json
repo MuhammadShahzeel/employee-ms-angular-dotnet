@@ -172,5 +172,21 @@
       }
     ],
     "ReturnTypes": []
+  },
+  {
+    "ContainingType": "EMSBackend.Controllers.ProfileController",
+    "Method": "GetProfile",
+    "RelativePath": "api/Profile/{id}",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "id",
+        "Type": "System.String",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
   }
 ]
