@@ -1,7 +1,7 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { Auth } from '../../services/auth';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { Eye, EyeClosed, LoaderCircle, LucideAngularModule } from 'lucide-angular';
+import { Eye, EyeClosed, LoaderCircle, LucideAngularModule, Pencil } from 'lucide-angular';
 import { Router } from '@angular/router';
 import { HttpService } from '../../services/http';
 
@@ -26,6 +26,7 @@ export class Profile implements OnInit {
   readonly LoaderCircle = LoaderCircle;
   readonly eye = Eye;
   readonly eyeClosed = EyeClosed;
+  readonly Pencil = Pencil;
 
 
   ngOnInit(): void {
@@ -101,6 +102,20 @@ getProfile() {
         }
       }
     });
+  }
+
+  onFileSelected(event: Event) {
+    const file = (event.target as HTMLInputElement).files?.[0];
+    if (!file) return;
+
+    const reader = new FileReader();
+    reader.onload = () => {
+      const base64 = reader.result as string;
+      this.profileForm.patchValue({
+        profileImage: base64
+      });
+    };
+    reader.readAsDataURL(file);
   }
 
 }
