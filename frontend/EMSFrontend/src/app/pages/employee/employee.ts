@@ -6,6 +6,7 @@ import { LucideAngularModule, Pencil, Trash2, LoaderCircle, X } from 'lucide-ang
 
 import { IDepartment } from '../../types/IDepartment';
 import { IEmployee } from '../../types/IEmployee';
+import { debounceTime, distinctUntilChanged } from 'rxjs';
 
 @Component({
   selector: 'app-employee',
@@ -140,7 +141,7 @@ getEmployees() {
 
   ngOnInit() : void {
      // jab search change ho
-  this.searchControl.valueChanges.subscribe((result: string | null) => {
+  this.searchControl.valueChanges.pipe(debounceTime(300), distinctUntilChanged()).subscribe((result: string | null) => {
     this.filter.search = result || '';   // agar null ho to empty string
     console.log(result);
     
