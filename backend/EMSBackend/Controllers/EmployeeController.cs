@@ -1,6 +1,8 @@
 ﻿
+using EMSBackend.Helpers;
 using EMSBackend.Interfaces;
 using EMSBackend.Models;
+using EMSBackend.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Identity;
 using Microsoft.AspNetCore.Mvc;
@@ -11,11 +13,12 @@ namespace EMSBackend.Controllers
     [ApiController]
     public class EmployeeController : ControllerBase
     {
-        private readonly IRepository<Employee> _employeeRepository;
+        private readonly IEmployeeRepository _employeeRepository;
+
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
-        public EmployeeController(IRepository<Employee> employeeRepository,
+        public EmployeeController(IEmployeeRepository employeeRepository,
              UserManager<User> userManager,
             RoleManager<IdentityRole> roleManager
             
@@ -28,9 +31,10 @@ namespace EMSBackend.Controllers
         }
         [HttpGet]
         [Authorize(Roles ="Admin")]
-        public async Task<IActionResult> Get()
+        public async Task<IActionResult> Get([FromQuery] SearchOptions options)
         {
-            return Ok(await _employeeRepository.GetAllAsync());
+            var employees = await _employeeRepository.GetAllAsync(options);
+            return Ok(employees);
         }
 
 

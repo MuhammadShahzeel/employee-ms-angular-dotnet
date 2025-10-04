@@ -29,7 +29,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
 // dependency inject for department
 builder.Services.AddScoped<IRepository<Department>, Repository<Department>>();
 // dependency inject for employee
-builder.Services.AddScoped<IRepository<Employee>, Repository<Employee>>();
+
+builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddIdentity<User, IdentityRole>(options =>
 {
