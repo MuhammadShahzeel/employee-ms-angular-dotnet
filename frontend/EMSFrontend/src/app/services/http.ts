@@ -1,4 +1,4 @@
-import { HttpClient } from '@angular/common/http';
+import { HttpClient, HttpParams } from '@angular/common/http';
 import { inject, Injectable } from '@angular/core';
 import { IDepartment } from '../types/IDepartment';
 import { IEmployee } from '../types/IEmployee';
@@ -26,8 +26,13 @@ export class HttpService {
 deleteDepartment(id: number) {
   return this.http.delete(`${environment.apiUrl}/api/Department/${id}`);
 }
-getEmployees() {
-  return this.http.get<IEmployee[]>(`${environment.apiUrl}/api/Employee`);
+getEmployees(filter: any) {
+  let params = new HttpParams({ fromObject: filter });
+
+  return this.http.get<IEmployee[]>(
+    `${environment.apiUrl}/api/Employee`, 
+    { params }   // 👈 direct params pass karo, .toString() ki zaroorat nahi
+  );
 }
 
 addEmployee(employee: IEmployee) {

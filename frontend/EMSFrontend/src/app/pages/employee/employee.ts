@@ -1,6 +1,6 @@
 import { Component, inject, OnInit } from '@angular/core';
 import { HttpService } from '../../services/http';
-import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
+import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
 import { LucideAngularModule, Pencil, Trash2, LoaderCircle, X } from 'lucide-angular'; // Loader icon
 
@@ -17,6 +17,8 @@ export class Employee implements OnInit {
 readonly Pencil = Pencil;
   readonly Trash2 = Trash2;
   readonly LoaderCircle = LoaderCircle;
+  searchControl = new FormControl('');
+filter: any = {};   //  isme saare filters store honge
 
   httpService = inject(HttpService);
   
@@ -50,7 +52,7 @@ readonly Pencil = Pencil;
 
 
 getEmployees() {
-    this.httpService.getEmployees().subscribe({
+    this.httpService.getEmployees(this.filter).subscribe({
       next: (result) => {
         this.employees = result;
         this.loading = false; // stop loader when data arrives
@@ -137,6 +139,14 @@ getEmployees() {
   }
 
   ngOnInit() : void {
+     // jab search change ho
+  this.searchControl.valueChanges.subscribe((result: string | null) => {
+    this.filter.search = result || '';   // agar null ho to empty string
+    console.log(result);
+    
+    this.getEmployees();                 // call reload
+  });
+
     this.getEmployees();
     this.getDepartments();
 
