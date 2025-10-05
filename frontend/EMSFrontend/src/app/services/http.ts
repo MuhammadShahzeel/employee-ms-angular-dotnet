@@ -4,6 +4,7 @@ import { IDepartment } from '../types/IDepartment';
 import { IEmployee } from '../types/IEmployee';
 import { environment } from '../../environments/environment';
 import { IProfile, IProfileResponse } from '../types/IProfile';
+import { IPagedData } from '../types/IPagedData';
 
 @Injectable({
   providedIn: 'root'
@@ -29,7 +30,7 @@ deleteDepartment(id: number) {
 getEmployees(filter: any) {
   let params = new HttpParams({ fromObject: filter });
 
-  return this.http.get<IEmployee[]>(
+  return this.http.get<IPagedData<IEmployee>>(
     `${environment.apiUrl}/api/Employee`, 
     { params }   // 👈 direct params pass karo, .toString() ki zaroorat nahi
   );

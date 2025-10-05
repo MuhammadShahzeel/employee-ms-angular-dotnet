@@ -15,11 +15,17 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
   styleUrl: './employee.css'
 })
 export class Employee implements OnInit {
+  Math = Math; // ✅ expose Math to your template
 readonly Pencil = Pencil;
   readonly Trash2 = Trash2;
   readonly LoaderCircle = LoaderCircle;
   searchControl = new FormControl('');
-filter: any = {};   //  isme saare filters store honge
+filter: any = {
+
+};   //  isme saare filters store honge
+pageIndex : number  = 0;
+pageSize : number  = 5;
+totalCount : number  = 0;
 
   httpService = inject(HttpService);
   
@@ -53,9 +59,12 @@ filter: any = {};   //  isme saare filters store honge
 
 
 getEmployees() {
+    this.filter.pageIndex = this.pageIndex;
+  this.filter.pageSize = this.pageSize;
     this.httpService.getEmployees(this.filter).subscribe({
       next: (result) => {
-        this.employees = result;
+        this.employees = result.data;
+        this.totalCount = result.totalCount;
         this.loading = false; // stop loader when data arrives
       },
       error: () => {
@@ -138,11 +147,21 @@ getEmployees() {
       }
     });
   }
+  // page change handler
+// page change handler
+onPageChange(newPage: number) {
+  this.pageIndex = newPage;
+  this.getEmployees();
+}
+
+
 
   ngOnInit() : void {
      // jab search change ho
   this.searchControl.valueChanges.pipe(debounceTime(300), distinctUntilChanged()).subscribe((result: string | null) => {
     this.filter.search = result || '';   // agar null ho to empty string
+     
+    this.pageIndex = 0; // reset to first page on new search
     console.log(result);
     
     this.getEmployees();                 // call reload
