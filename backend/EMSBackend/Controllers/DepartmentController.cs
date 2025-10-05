@@ -1,5 +1,7 @@
-﻿using EMSBackend.Interfaces;
+﻿using EMSBackend.Helpers;
+using EMSBackend.Interfaces;
 using EMSBackend.Models;
+using EMSBackend.Repositories;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 namespace EMSBackend.Controllers
@@ -9,11 +11,12 @@ namespace EMSBackend.Controllers
     [ApiController]
     public class DepartmentController : ControllerBase
     {
-        private readonly IRepository<Department> _departmentRepository;
+        private readonly IDepartmentRepository _departmentRepository;
 
-        public DepartmentController(IRepository<Department> departmentRepository)
+        public DepartmentController(IDepartmentRepository departmentRepository)
         {
             _departmentRepository = departmentRepository;
+       
         }
 
         [HttpPost]
@@ -39,11 +42,10 @@ namespace EMSBackend.Controllers
 
         [HttpGet]
         [Authorize]
-        public async Task<IActionResult> getAllDepartment()
+        public async Task<IActionResult> getAllDepartment([FromQuery] SearchOptions options)
         {
-            var list = await _departmentRepository.GetAllAsync();
-
-            return Ok(list);
+            var result = await _departmentRepository.GetAllAsync(options);
+            return Ok(result);
         }
 
         [HttpDelete("{id}")]

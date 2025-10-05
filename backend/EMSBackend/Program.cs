@@ -27,7 +27,8 @@ builder.Services.AddDbContext<ApplicationDBContext>(options =>
     options.UseSqlServer(connectionString));
 
 // dependency inject for department
-builder.Services.AddScoped<IRepository<Department>, Repository<Department>>();
+builder.Services.AddScoped<IDepartmentRepository, DepartmentRepository>();
+
 // dependency inject for employee
 
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
