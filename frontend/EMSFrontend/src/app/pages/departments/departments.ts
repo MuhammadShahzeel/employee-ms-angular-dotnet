@@ -11,10 +11,17 @@ import { IDepartment } from '../../types/IDepartment';
   styleUrl: './departments.css'
 })
 export class Departments implements OnInit {
+    Math = Math; // ✅ expose Math to your template
 
   readonly Pencil = Pencil;
   readonly Trash2 = Trash2;
   readonly LoaderCircle = LoaderCircle;
+filter: any = {
+
+};   //  isme saare filters store honge
+pageIndex : number  = 0;
+pageSize : number  = 5;
+totalCount : number  = 0;
 
   httpService = inject(HttpService);
 
@@ -38,9 +45,12 @@ export class Departments implements OnInit {
 
 
 getDepartments() {
-    this.httpService.getDepartments().subscribe({
+     this.filter.pageIndex = this.pageIndex;
+  this.filter.pageSize = this.pageSize;
+    this.httpService.getDepartments(this.filter).subscribe({
       next: (result) => {
-        this.departments = result;
+          this.departments = result.data;
+        this.totalCount = result.totalCount;
         this.loading = false; // stop loader when data arrives
       },
       error: () => {
@@ -51,6 +61,7 @@ getDepartments() {
     });
 
 }
+
 
 
 
@@ -109,4 +120,12 @@ getDepartments() {
     this.getDepartments();
   
   }
+    // page change handler
+// page change handler
+onPageChange(newPage: number) {
+  this.pageIndex = newPage;
+  this.getDepartments();
+}
+
+
 }
