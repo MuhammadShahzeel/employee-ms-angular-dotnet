@@ -15,6 +15,8 @@ namespace EMSBackend.Controllers
     {
         private readonly IEmployeeRepository _employeeRepository;
 
+        
+
         private readonly UserManager<User> _userManager;
         private readonly RoleManager<IdentityRole> _roleManager;
 
@@ -33,8 +35,8 @@ namespace EMSBackend.Controllers
         [Authorize(Roles ="Admin")]
         public async Task<IActionResult> Get([FromQuery] SearchOptions options)
         {
-            var employees = await _employeeRepository.GetAllAsync(options);
-            return Ok(employees);
+            var result = await _employeeRepository.GetAllAsync(options);
+            return Ok(result);
         }
 
 

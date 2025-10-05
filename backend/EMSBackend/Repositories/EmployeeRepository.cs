@@ -15,29 +15,39 @@ namespace EMSBackend.Repositories
             _context = context;
         }
 
-        public async Task<List<Employee>> GetAllAsync(SearchOptions options)
-        {
-            var query = _context.Employees.AsQueryable();
+        public async Task<PagedResult<Employee>> GetAllAsync(SearchOptions options)
+{
+    var query = _context.Employees.AsQueryable();
 
-            // Apply search if given
-            if (!string.IsNullOrWhiteSpace(options.Search))
-            {
-                query = query.Where(x =>
-                    x.Name.Contains(options.Search) ||
-                    x.Phone.Contains(options.Search) ||
-                    x.Email.Contains(options.Search));
-            }
+    // Apply search
+    if (!string.IsNullOrWhiteSpace(options.Search))
+    {
+        query = query.Where(x =>
+            x.Name.Contains(options.Search) ||
+            x.Phone.Contains(options.Search) ||
+            x.Email.Contains(options.Search));
+    }
 
-            // Apply pagination only if both PageIndex  are given
-            if (options.PageIndex.HasValue)
-            {
-                query = query
-                    .Skip(options.PageIndex.Value * options.PageSize)
-                    .Take(options.PageSize);
-            }
+    // Get total count before pagination
+    var totalCount = await query.CountAsync();
 
-            return await query.ToListAsync();
-        }
+    // Apply pagination
+    if (options.PageIndex.HasValue)
+    {
+        query = query
+            .Skip(options.PageIndex.Value * options.PageSize)
+            .Take(options.PageSize);
+    }
+
+    var data = await query.ToListAsync();
+
+    return new PagedResult<Employee>
+    {
+        TotalCount = totalCount,
+        Data = data
+    };
+}
+
 
 
     }
