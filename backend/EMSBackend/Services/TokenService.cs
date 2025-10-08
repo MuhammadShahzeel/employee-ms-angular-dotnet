@@ -26,7 +26,7 @@ namespace EMSBackend.Services
         {
             var claims = new List<Claim>
             {
-                new Claim(JwtRegisteredClaimNames.Email, user.Email),
+                 new Claim(ClaimTypes.Email, user.Email) // 👈 add this line,
              
             };
             //  get roles from Identity
