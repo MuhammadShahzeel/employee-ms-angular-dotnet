@@ -5,7 +5,7 @@ namespace EMSBackend.Mappers
 {
     public static class LeaveMappers
     {
-        public static Leave ToLeave(this LeaveDto dto,int empId)
+        public static Leave ToLeave(this LeaveDto dto, int empId)
         {
             return new Leave
             {
@@ -17,5 +17,11 @@ namespace EMSBackend.Mappers
             };
         }
 
-    }
-}
+    
+        public static void UpdateLeaveFromDto(this Leave leave, LeaveDto dto)
+        {
+            leave.Status = dto.Status!.Value;
+
+
+        }
+    } }

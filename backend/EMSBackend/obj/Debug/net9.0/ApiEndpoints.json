@@ -206,6 +206,22 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMSBackend.Controllers.LeaveController",
+    "Method": "UpdateLeaveStatus",
+    "RelativePath": "api/Leave/update-leave",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [
+      {
+        "Name": "model",
+        "Type": "EMSBackend.Dtos.LeaveDto",
+        "IsRequired": true
+      }
+    ],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.ProfileController",
     "Method": "UpdateProfile",
     "RelativePath": "api/Profile",

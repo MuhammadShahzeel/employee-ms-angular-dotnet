@@ -44,8 +44,52 @@ namespace EMSBackend.Controllers
             return Ok(new { message = "Leave applied successfully"});
         }
 
-      
+
+        [HttpPost("update-leave")]
+        [Authorize(Roles = "Employee,Admin")]
+        public async Task<IActionResult> UpdateLeaveStatus([FromBody] LeaveDto model)
+        {
+            if (model == null)
+                return BadRequest("Invalid leave data.");
+
+            var leave = await _leaveRepo.GetByIdAsync(model.Id!.Value);
+            if (leave == null)
+                return NotFound("Leave not found.");
+
+            //  Check role from JWT claim
+            var isAdmin = _userContext.IsAdmin(User);
+
+            if (isAdmin)
+            {
+                //  Admin can update any status (use mapper directly)
+                leave.UpdateLeaveFromDto(model);
+            }
+            else
+            {
+                //  Employee can only cancel their leave
+                if (model.Status == (int)LeaveStatus.Cancelled)
+                {
+                    leave.UpdateLeaveFromDto(model);
+                }
+                else
+                {
+                    return StatusCode(StatusCodes.Status403Forbidden, new { message = "Only admin can change this status." });
+
+                }
+            }
+
+            _leaveRepo.Update(leave);
+            await _leaveRepo.SaveChangesAsync();
+
+            return Ok(new { message = "Leave updated successfully" });
+        }
+
+
 
 
     }
+
+
+
+
 }
