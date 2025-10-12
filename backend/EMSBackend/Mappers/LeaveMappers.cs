@@ -10,8 +10,8 @@ namespace EMSBackend.Mappers
             return new Leave
             {
                 Type = (int)dto.Type,
-                Reason = dto.Reason,
-                LeaveDate = dto.LeaveDate,
+                Reason = dto.Reason!,
+                LeaveDate = dto.LeaveDate.Value,
                 Status = (int)LeaveStatus.Pending,
                 EmployeeId = empId
             };
