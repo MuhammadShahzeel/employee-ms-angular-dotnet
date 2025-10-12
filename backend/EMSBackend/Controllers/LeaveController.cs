@@ -1,7 +1,9 @@
 ﻿using EMSBackend.Dtos;
+using EMSBackend.Helpers;
 using EMSBackend.Interfaces;
 using EMSBackend.Mappers;
 using EMSBackend.Models;
+using EMSBackend.Repositories;
 using Microsoft.AspNetCore.Authorization;
 
 using Microsoft.AspNetCore.Mvc;
@@ -13,10 +15,10 @@ namespace EMSBackend.Controllers
     [ApiController]
     public class LeaveController : ControllerBase
     {
-        private readonly IRepository<Leave> _leaveRepo;
+        private readonly ILeaveRepository _leaveRepo;
         private readonly IUserContextService _userContext;
 
-        public LeaveController(IRepository<Leave> LeaveRepo, IUserContextService userContext)
+        public LeaveController(ILeaveRepository LeaveRepo, IUserContextService userContext)
         {
             _leaveRepo = LeaveRepo;
             _userContext = userContext;
@@ -83,6 +85,37 @@ namespace EMSBackend.Controllers
 
             return Ok(new { message = "Leave updated successfully" });
         }
+
+
+        [HttpGet]
+        [Authorize(Roles = "Employee,Admin")]
+        public async Task<IActionResult> LeavesList([FromQuery] SearchOptions options)
+        {
+            //  Check role from JWT claim
+            var isAdmin = _userContext.IsAdmin(User);
+
+            if (isAdmin)
+            {
+                var result = await _leaveRepo.GetAllAsync(options);
+                return Ok(result);
+            }
+            else
+            {
+                var employeeId = await _userContext.GetEmployeeIdFromClaimsAsync(User);
+                if (employeeId == null)
+                    return Unauthorized("Employee not found.");
+
+                var result = await _leaveRepo.GetByEmployeeIdAsync(employeeId.Value, options);
+                return Ok(result);
+
+            }
+
+         
+
+            
+        }
+
+
 
 
 

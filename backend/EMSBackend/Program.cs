@@ -35,6 +35,9 @@ builder.Services.AddScoped<IRepository<Department>, Repository<Department>>();
 builder.Services.AddScoped<IEmployeeRepository, EmployeeRepository>();
 builder.Services.AddScoped<IRepository<Employee>, Repository<Employee>>();
 
+// dependency inject for leave
+builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
+
 builder.Services.AddScoped <IRepository<Leave>, Repository<Leave>>();
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
