@@ -1,6 +1,6 @@
 import { Component, inject, signal } from '@angular/core';
 import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
-import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users,  LogInIcon, LogOutIcon, User } from 'lucide-angular';
+import { LucideAngularModule, TextAlignJustify,LayoutDashboard, Building2,Users,  LogInIcon, LogOutIcon, User, CalendarDays, CalendarDaysIcon } from 'lucide-angular';
 import { Auth } from './services/auth';
 
 
@@ -22,6 +22,7 @@ export class App {
     readonly Users = Users;
     readonly LogIn = LogInIcon; 
     readonly LogOut = LogOutIcon;
+    readonly Leaves = CalendarDays
     authService = inject(Auth);
 
      isSidebarOpen = true;

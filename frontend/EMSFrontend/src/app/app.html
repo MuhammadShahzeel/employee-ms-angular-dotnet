@@ -58,6 +58,12 @@
               <lucide-icon [img]="LayoutDashboard" class="w-5 h-5"></lucide-icon>
               <span class="text-sm font-medium">Dashboard</span>
             </a>
+            <a routerLink="/leaves" routerLinkActive="bg-gray-100 text-gray-900"
+               class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                      rounded-lg px-3 py-2 transition-colors duration-200">
+              <lucide-icon [img]="Leaves" class="w-5 h-5"></lucide-icon>
+              <span class="text-sm font-medium">Leaves</span>
+            </a>
           }
        @else{
          <a routerLink="/dashboard" routerLinkActive="bg-gray-100 text-gray-900"
@@ -78,6 +84,12 @@
            <lucide-icon [img]="Users" class="w-5 h-5"></lucide-icon>
            <span class="text-sm font-medium">Employees</span>
          </a>
+                   <a routerLink="/leaves" routerLinkActive="bg-gray-100 text-gray-900"
+               class="flex items-center gap-3 text-gray-600 hover:text-gray-900 hover:bg-gray-50 
+                      rounded-lg px-3 py-2 transition-colors duration-200">
+              <lucide-icon [img]="Leaves" class="w-5 h-5"></lucide-icon>
+              <span class="text-sm font-medium">Leaves</span>
+            </a>
 
        }
         </nav>
