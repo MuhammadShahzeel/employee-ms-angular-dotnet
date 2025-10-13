@@ -47,7 +47,7 @@ namespace EMSBackend.Controllers
         }
 
 
-        [HttpPost("update-leave")]
+        [HttpPut("update-leave")]
         [Authorize(Roles = "Employee,Admin")]
         public async Task<IActionResult> UpdateLeaveStatus([FromBody] LeaveDto model)
         {

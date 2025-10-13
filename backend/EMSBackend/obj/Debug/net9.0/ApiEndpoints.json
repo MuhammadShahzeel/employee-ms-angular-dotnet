@@ -235,7 +235,7 @@
     "ContainingType": "EMSBackend.Controllers.LeaveController",
     "Method": "UpdateLeaveStatus",
     "RelativePath": "api/Leave/update-leave",
-    "HttpMethod": "POST",
+    "HttpMethod": "PUT",
     "IsController": true,
     "Order": 0,
     "Parameters": [
