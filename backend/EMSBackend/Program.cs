@@ -39,6 +39,9 @@ builder.Services.AddScoped<IRepository<Employee>, Repository<Employee>>();
 builder.Services.AddScoped<ILeaveRepository, LeaveRepository>();
 
 builder.Services.AddScoped <IRepository<Leave>, Repository<Leave>>();
+// dependency inject for attendence
+builder.Services.AddScoped<IRepository<Attendence>, Repository<Attendence>>();
+
 builder.Services.AddScoped<ITokenService, TokenService>();
 builder.Services.AddScoped<IUserContextService, UserContextService>();
 builder.Services.AddIdentity<User, IdentityRole>(options =>

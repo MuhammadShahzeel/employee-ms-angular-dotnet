@@ -4,7 +4,7 @@ using Microsoft.EntityFrameworkCore;
 
 namespace EMSBackend.Data
 {
-    public class ApplicationDBContext: IdentityDbContext<User>
+    public class ApplicationDBContext : IdentityDbContext<User>
 
     {
         public ApplicationDBContext(DbContextOptions<ApplicationDBContext> options) : base(options)
@@ -12,12 +12,16 @@ namespace EMSBackend.Data
 
 
         }
-        public DbSet< Employee> Employees { get; set; }
+        public DbSet<Employee> Employees { get; set; }
         public DbSet<Department> Departments { get; set; }
         public DbSet<Leave> Leaves { get; set; }
+        public DbSet<Attendence> Attendences
+        {
+            get; set;
 
 
 
 
+        }
     }
 }

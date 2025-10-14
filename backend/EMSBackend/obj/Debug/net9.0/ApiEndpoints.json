@@ -1,5 +1,15 @@
 [
   {
+    "ContainingType": "EMSBackend.Controllers.AttendenceController",
+    "Method": "MarkAttendence",
+    "RelativePath": "api/Attendence/mark-present",
+    "HttpMethod": "POST",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.AuthController",
     "Method": "Login",
     "RelativePath": "api/Auth/login",
