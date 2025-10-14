@@ -9,6 +9,7 @@ using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 
 
+
 namespace EMSBackend.Controllers
 {
     [Route("api/[controller]")]
@@ -17,11 +18,13 @@ namespace EMSBackend.Controllers
     {
         private readonly ILeaveRepository _leaveRepo;
         private readonly IUserContextService _userContext;
+        private readonly IRepository<Attendence> _attendenceRepo;
 
-        public LeaveController(ILeaveRepository LeaveRepo, IUserContextService userContext)
+        public LeaveController(ILeaveRepository LeaveRepo, IUserContextService userContext,IRepository<Attendence> attendenceRepo)
         {
             _leaveRepo = LeaveRepo;
             _userContext = userContext;
+            _attendenceRepo = attendenceRepo;
         }
         [HttpPost("apply")]
         [Authorize(Roles ="Employee")]
@@ -65,6 +68,20 @@ namespace EMSBackend.Controllers
             {
                 //  Admin can update any status (use mapper directly)
                 leave.UpdateLeaveFromDto(model);
+
+                if (model.Status == (int)LeaveStatus.Accepted)
+                {
+                    //  If leave is accepted, we mark the leave on attendence as well
+                    //If not marked, create new record
+                    var attendence = new Attendence
+                    {
+                        Date = leave.LeaveDate.ToDateTime(TimeOnly.MinValue), //isliye kia q k leavedate DateOnly h jo mene datetime k bajae rkhi th is liye type mismatch sy bachny k liye convert kia
+                        EmployeeId = leave.EmployeeId,
+                        Type = (int)AttendenceType.Leave
+                    };
+                    await _attendenceRepo.AddAsync(attendence);
+
+                }
             }
             else
             {
