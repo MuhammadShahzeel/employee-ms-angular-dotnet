@@ -1,6 +1,6 @@
 import { Component, inject } from '@angular/core';
 import { FormBuilder, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
-import { LucideAngularModule, X } from 'lucide-angular';
+import { CalendarCheck2, CheckCircle, CircleCheck, FilePlus2, LucideAngularModule, X } from 'lucide-angular';
 import { Leave } from '../../services/leave';
 import { ApplyLeave } from '../../types/ILeave';
 
@@ -11,7 +11,11 @@ import { ApplyLeave } from '../../types/ILeave';
   styleUrl: './employee-dashboard.css'
 })
 export class EmployeeDashboard {
+
   readonly X = X;
+  readonly FilePlus2 = FilePlus2;
+
+  readonly CircleCheck = CircleCheck;
 
   fb = inject(FormBuilder);
   leaveService = inject(Leave);
@@ -51,4 +55,21 @@ export class EmployeeDashboard {
       },
     });
   }
+
+  markAttendance() {
+    this.leaveService.markAttendance().subscribe({
+      next: (res:any) => {
+        alert(res.message);
+      },
+      error: (err) => {
+       if(err.error && err.error.message){
+        alert(err.error.message);
+       } else{
+        alert('Failed to mark attendance.');
+       }
+      },
+    });
+  }
 }
+
+   

@@ -1,13 +1,29 @@
 <div class="space-y-6">
-  <!-- Header -->
-  <div class="flex items-center justify-between">
-    <h2 class="text-xl font-semibold text-gray-800">Apply Leaves</h2>
 
-    <button (click)="openModal()" 
-      class="px-4 py-2 rounded-lg bg-blue-600 text-white text-sm font-medium 
-             hover:bg-blue-700 transition shadow-sm">
-      Apply Leave
-    </button>
+  <!-- Dashboard Card -->
+  <div class="bg-white rounded-xl shadow-md p-6 border border-gray-200">
+
+  
+
+    <!-- Action Buttons -->
+    <div class="flex flex-wrap gap-4">
+      <button (click)="openModal()" 
+        class="flex-1 min-w-[150px] px-5 py-3 rounded-lg bg-blue-600 text-white 
+               text-sm font-medium hover:bg-blue-700 transition shadow-sm flex 
+               items-center justify-center gap-2">
+        <lucide-icon [img]="FilePlus2" class="w-4 h-4"></lucide-icon>
+        Apply Leave
+      </button>
+
+      <button (click)="markAttendance()"
+        class="flex-1 min-w-[150px] px-5 py-3 rounded-lg bg-blue-600 text-white 
+               text-sm font-medium hover:bg-blue-700 transition shadow-sm flex 
+               items-center justify-center gap-2">
+        <lucide-icon [img]="CircleCheck" class="w-4 h-4"></lucide-icon>
+        Mark Attendance
+      </button>
+    </div>
+
   </div>
 </div>
 
