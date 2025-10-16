@@ -3,8 +3,56 @@
   "WorkspaceRootPath": "D:\\dev\\Employee Management System\\backend\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\attendencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\attendencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\interfaces\\iattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\interfaces\\iattendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\repositories\\attendancerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\migrations\\20251005232404_addedleavestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\migrations\\20251005232404_addedleavestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\helpers\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\helpers\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\leavecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\helpers\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\helpers\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\models\\attendence.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -19,32 +67,12 @@
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\models\\leave.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\attendencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\attendencecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\program.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\employeecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\departmentcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\profilecontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\repositories\\repository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\services\\usercontextservice.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\interfaces\\irepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -71,16 +99,8 @@
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\interfaces\\iemployeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\interfaces\\idepartmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\controllers\\authcontroller.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\repositories\\departmentrepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\repositories\\employeerepository.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -121,14 +141,6 @@
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\dtos\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\dtos\\profiledto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\helpers\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\helpers\\searchoptions.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\helpers\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\helpers\\pagedresult.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\models\\department.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
@@ -191,10 +203,6 @@
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\migrations\\20251005233731_updateleavetable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\migrations\\20251005232404_addedleavestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\migrations\\20251005232404_addedleavestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
       "AbsoluteMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|d:\\dev\\employee management system\\backend\\emsbackend\\migrations\\20251013234609_addedattendancestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{6C55F40A-294B-4D8F-8B07-C548AB608C1D}|EMSBackend\\EMSBackend.csproj|solutionrelative:emsbackend\\migrations\\20251013234609_addedattendancestable.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     }
@@ -206,7 +214,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -214,13 +222,65 @@
             },
             {
               "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Program.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Program.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Program.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Program.cs",
+              "RelativeToolTip": "EMSBackend\\Program.cs",
+              "ViewState": "AgIAAFEAAAAAAAAAAAAQwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-09T21:02:35.248Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "DepartmentRepository.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\DepartmentRepository.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Repositories\\DepartmentRepository.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\DepartmentRepository.cs",
+              "RelativeToolTip": "EMSBackend\\Repositories\\DepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAQwB8AAAAsAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:44:43.673Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "AttendanceRepository.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\AttendanceRepository.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Repositories\\AttendanceRepository.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\AttendanceRepository.cs",
+              "RelativeToolTip": "EMSBackend\\Repositories\\AttendanceRepository.cs",
+              "ViewState": "AgIAABcAAAAAAAAAAAAQwC4AAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T21:36:19.001Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "IAttendanceRepository.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IAttendanceRepository.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IAttendanceRepository.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IAttendanceRepository.cs",
+              "RelativeToolTip": "EMSBackend\\Interfaces\\IAttendanceRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAoAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-15T21:40:24.666Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
               "Title": "AttendenceController.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\AttendenceController.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Controllers\\AttendenceController.cs",
               "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\AttendenceController.cs",
               "RelativeToolTip": "EMSBackend\\Controllers\\AttendenceController.cs",
-              "ViewState": "AgIAACMAAAAAAAAAAAAQwCwAAAALAAAAAAAAAA==",
+              "ViewState": "AgIAAEIAAAAAAAAAAAAAABkAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2025-10-13T23:49:08.986Z",
               "EditorCaption": ""
@@ -228,94 +288,45 @@
             {
               "$type": "Document",
               "DocumentIndex": 5,
-              "Title": "Program.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Program.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Program.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Program.cs",
-              "RelativeToolTip": "EMSBackend\\Program.cs",
-              "ViewState": "AgIAAB0AAAAAAAAAAAAAwCkAAAAZAAAAAAAAAA==",
+              "Title": "20251005232404_AddedLeavesTable.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
+              "RelativeToolTip": "EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T21:02:35.248Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "LeaveController.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\LeaveController.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Controllers\\LeaveController.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\LeaveController.cs",
-              "RelativeToolTip": "EMSBackend\\Controllers\\LeaveController.cs",
-              "ViewState": "AgIAAEEAAAAAAAAAAAAzwFIAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T23:39:57.994Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "ProfileController.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\ProfileController.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Controllers\\ProfileController.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\ProfileController.cs",
-              "RelativeToolTip": "EMSBackend\\Controllers\\ProfileController.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBAAAAAvAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-29T21:45:57.226Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 9,
-              "Title": "Repository.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\Repository.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Repositories\\Repository.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\Repository.cs",
-              "RelativeToolTip": "EMSBackend\\Repositories\\Repository.cs",
-              "ViewState": "AgIAACUAAAAAAAAAAAAkwDQAAAAGAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-10T17:35:37.813Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "LeaveMappers.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\LeaveMappers.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Mappers\\LeaveMappers.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\LeaveMappers.cs",
-              "RelativeToolTip": "EMSBackend\\Mappers\\LeaveMappers.cs",
-              "ViewState": "AgIAAAgAAAAAAAAAAAAowBMAAAAEAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-06T22:28:18.008Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Attendence.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Attendence.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Models\\Attendence.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Attendence.cs",
-              "RelativeToolTip": "EMSBackend\\Models\\Attendence.cs",
-              "ViewState": "AgIAAAUAAAAAAAAAAAAcwA0AAAAQAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-13T23:11:28.268Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Leave.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Leave.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Models\\Leave.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Leave.cs",
-              "RelativeToolTip": "EMSBackend\\Models\\Leave.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T22:54:09.221Z",
+              "WhenOpened": "2025-10-05T23:24:04.626Z",
               "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 6,
+              "Title": "IDepartmentRepository.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IDepartmentRepository.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IDepartmentRepository.cs",
+              "RelativeToolTip": "EMSBackend\\Interfaces\\IDepartmentRepository.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAYAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T17:42:36.075Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "UserContextService.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Services\\UserContextService.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Services\\UserContextService.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Services\\UserContextService.cs",
+              "RelativeToolTip": "EMSBackend\\Services\\UserContextService.cs",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAuwAgAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-08T17:59:09.974Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "EmployeeController.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\EmployeeController.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Controllers\\EmployeeController.cs",
@@ -323,11 +334,24 @@
               "RelativeToolTip": "EMSBackend\\Controllers\\EmployeeController.cs",
               "ViewState": "AgIAABkAAAAAAAAAAAAkwCUAAAAFAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-09-09T22:57:09.977Z"
+              "WhenOpened": "2025-09-09T22:57:09.977Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 7,
+              "DocumentIndex": 9,
+              "Title": "PagedResult.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\PagedResult.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Helpers\\PagedResult.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\PagedResult.cs",
+              "RelativeToolTip": "EMSBackend\\Helpers\\PagedResult.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAIAAAARAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-04T23:49:05.7Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
               "Title": "DepartmentController.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\DepartmentController.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Controllers\\DepartmentController.cs",
@@ -339,19 +363,92 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 10,
-              "Title": "UserContextService.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Services\\UserContextService.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Services\\UserContextService.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Services\\UserContextService.cs",
-              "RelativeToolTip": "EMSBackend\\Services\\UserContextService.cs",
-              "ViewState": "AgIAACwAAAAAAAAAAAAswEQAAAAAAAAAAAAAAA==",
+              "DocumentIndex": 12,
+              "Title": "SearchOptions.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\SearchOptions.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Helpers\\SearchOptions.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\SearchOptions.cs",
+              "RelativeToolTip": "EMSBackend\\Helpers\\SearchOptions.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAgAAAAsAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-08T17:59:09.974Z"
+              "WhenOpened": "2025-10-04T17:35:21.455Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 12,
+              "DocumentIndex": 11,
+              "Title": "LeaveController.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\LeaveController.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Controllers\\LeaveController.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\LeaveController.cs",
+              "RelativeToolTip": "EMSBackend\\Controllers\\LeaveController.cs",
+              "ViewState": "AgIAAFMAAAAAAAAAAAAzwFIAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T23:39:57.994Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "LeaveMappers.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\LeaveMappers.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Mappers\\LeaveMappers.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\LeaveMappers.cs",
+              "RelativeToolTip": "EMSBackend\\Mappers\\LeaveMappers.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAowBMAAAAEAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-06T22:28:18.008Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 17,
+              "Title": "Repository.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\Repository.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Repositories\\Repository.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\Repository.cs",
+              "RelativeToolTip": "EMSBackend\\Repositories\\Repository.cs",
+              "ViewState": "AgIAACUAAAAAAAAAAAAkwDQAAAAGAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-10T17:35:37.813Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 16,
+              "Title": "ProfileController.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\ProfileController.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Controllers\\ProfileController.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\ProfileController.cs",
+              "RelativeToolTip": "EMSBackend\\Controllers\\ProfileController.cs",
+              "ViewState": "AgIAAAgAAAAAAAAAAAAcwBAAAAAvAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-09-29T21:45:57.226Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "Attendence.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Attendence.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Models\\Attendence.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Attendence.cs",
+              "RelativeToolTip": "EMSBackend\\Models\\Attendence.cs",
+              "ViewState": "AgIAAAUAAAAAAAAAAAAcwA0AAAAQAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-13T23:11:28.268Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "Leave.cs",
+              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Leave.cs",
+              "RelativeDocumentMoniker": "EMSBackend\\Models\\Leave.cs",
+              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Leave.cs",
+              "RelativeToolTip": "EMSBackend\\Models\\Leave.cs",
+              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAXAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2025-10-05T22:54:09.221Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 19,
               "Title": "ApplicationDBContext.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Data\\ApplicationDBContext.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Data\\ApplicationDBContext.cs",
@@ -363,7 +460,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 48,
+              "DocumentIndex": 50,
               "Title": "20251013234609_AddedAttendancesTable.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251013234609_AddedAttendancesTable.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20251013234609_AddedAttendancesTable.cs",
@@ -375,7 +472,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 20,
               "Title": "LeaveDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\LeaveDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\LeaveDto.cs",
@@ -387,7 +484,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 11,
+              "DocumentIndex": 18,
               "Title": "IRepository.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IRepository.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IRepository.cs",
@@ -399,7 +496,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 16,
+              "DocumentIndex": 23,
               "Title": "IEmployeeRepository.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IEmployeeRepository.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IEmployeeRepository.cs",
@@ -411,7 +508,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 14,
+              "DocumentIndex": 21,
               "Title": "LeaveRepository.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\LeaveRepository.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Repositories\\LeaveRepository.cs",
@@ -419,11 +516,12 @@
               "RelativeToolTip": "EMSBackend\\Repositories\\LeaveRepository.cs",
               "ViewState": "AgIAAA0AAAAAAAAAAAAQwBEAAAALAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T22:20:17.577Z"
+              "WhenOpened": "2025-10-11T22:20:17.577Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 15,
+              "DocumentIndex": 22,
               "Title": "ILeaveRepository.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\ILeaveRepository.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\ILeaveRepository.cs",
@@ -431,23 +529,12 @@
               "RelativeToolTip": "EMSBackend\\Interfaces\\ILeaveRepository.cs",
               "ViewState": "AgIAAAQAAAAAAAAAAAAxwA4AAAAhAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-11T22:20:40.517Z"
+              "WhenOpened": "2025-10-11T22:20:40.517Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
-              "DocumentIndex": 17,
-              "Title": "IDepartmentRepository.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IDepartmentRepository.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IDepartmentRepository.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IDepartmentRepository.cs",
-              "RelativeToolTip": "EMSBackend\\Interfaces\\IDepartmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAgAAAAmAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T17:42:36.075Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 18,
+              "DocumentIndex": 24,
               "Title": "AuthController.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Controllers\\AuthController.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Controllers\\AuthController.cs",
@@ -459,19 +546,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 19,
-              "Title": "DepartmentRepository.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\DepartmentRepository.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Repositories\\DepartmentRepository.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\DepartmentRepository.cs",
-              "RelativeToolTip": "EMSBackend\\Repositories\\DepartmentRepository.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAACoAAAAFAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T17:44:43.673Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 20,
+              "DocumentIndex": 25,
               "Title": "EmployeeRepository.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Repositories\\EmployeeRepository.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Repositories\\EmployeeRepository.cs",
@@ -483,7 +558,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 22,
+              "DocumentIndex": 27,
               "Title": "TokenService.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Services\\TokenService.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Services\\TokenService.cs",
@@ -495,7 +570,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 21,
+              "DocumentIndex": 26,
               "Title": "IUserContextService.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\IUserContextService.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\IUserContextService.cs",
@@ -507,7 +582,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 23,
+              "DocumentIndex": 28,
               "Title": "ProfileMappers.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\ProfileMappers.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Mappers\\ProfileMappers.cs",
@@ -519,7 +594,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 25,
+              "DocumentIndex": 30,
               "Title": "ITokenService.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Interfaces\\ITokenService.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Interfaces\\ITokenService.cs",
@@ -531,7 +606,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 24,
+              "DocumentIndex": 29,
               "Title": "appsettings.json",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\appsettings.json",
               "RelativeDocumentMoniker": "EMSBackend\\appsettings.json",
@@ -543,7 +618,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 26,
+              "DocumentIndex": 31,
               "Title": "Employee.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Employee.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Models\\Employee.cs",
@@ -555,7 +630,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 27,
+              "DocumentIndex": 32,
               "Title": "AuthMappers.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Mappers\\AuthMappers.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Mappers\\AuthMappers.cs",
@@ -567,7 +642,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 28,
+              "DocumentIndex": 33,
               "Title": "ProfileResponseDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\ProfileResponseDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\ProfileResponseDto.cs",
@@ -579,7 +654,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 29,
+              "DocumentIndex": 34,
               "Title": "ProfileDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\ProfileDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\ProfileDto.cs",
@@ -591,31 +666,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 30,
-              "Title": "SearchOptions.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\SearchOptions.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Helpers\\SearchOptions.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\SearchOptions.cs",
-              "RelativeToolTip": "EMSBackend\\Helpers\\SearchOptions.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAAAAkAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T17:35:21.455Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 47,
-              "Title": "20251005232404_AddedLeavesTable.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
-              "RelativeToolTip": "EMSBackend\\Migrations\\20251005232404_AddedLeavesTable.cs",
-              "ViewState": "AgIAABAAAAAAAAAAAAAkwAAAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-05T23:24:04.626Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 46,
+              "DocumentIndex": 49,
               "Title": "20251005233731_UpdateLeaveTable.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251005233731_UpdateLeaveTable.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20251005233731_UpdateLeaveTable.cs",
@@ -627,19 +678,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 31,
-              "Title": "PagedResult.cs",
-              "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\PagedResult.cs",
-              "RelativeDocumentMoniker": "EMSBackend\\Helpers\\PagedResult.cs",
-              "ToolTip": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Helpers\\PagedResult.cs",
-              "RelativeToolTip": "EMSBackend\\Helpers\\PagedResult.cs",
-              "ViewState": "AgIAAAAAAAAAAAAAAAAuwAUAAAAXAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2025-10-04T23:49:05.7Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 32,
+              "DocumentIndex": 35,
               "Title": "Department.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\Department.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Models\\Department.cs",
@@ -651,7 +690,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 33,
+              "DocumentIndex": 36,
               "Title": "20251001001949_MakeProfileImageNullable.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20251001001949_MakeProfileImageNullable.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20251001001949_MakeProfileImageNullable.cs",
@@ -663,7 +702,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 34,
+              "DocumentIndex": 37,
               "Title": "User.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Models\\User.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Models\\User.cs",
@@ -675,7 +714,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 35,
+              "DocumentIndex": 38,
               "Title": "RegisterTokenDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\RegisterTokenDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\RegisterTokenDto.cs",
@@ -687,7 +726,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 36,
+              "DocumentIndex": 39,
               "Title": "AuthDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\AuthDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\AuthDto.cs",
@@ -699,7 +738,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 45,
+              "DocumentIndex": 48,
               "Title": "20250929213144_addProfileImageColumn.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250929213144_addProfileImageColumn.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250929213144_addProfileImageColumn.cs",
@@ -711,7 +750,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 37,
+              "DocumentIndex": 40,
               "Title": "LoginTokenDto.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Dtos\\LoginTokenDto.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Dtos\\LoginTokenDto.cs",
@@ -723,7 +762,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 38,
+              "DocumentIndex": 41,
               "Title": "RoleSeeder.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Seed\\RoleSeeder.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Seed\\RoleSeeder.cs",
@@ -735,7 +774,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 42,
+              "DocumentIndex": 45,
               "Title": "20250920223700_UpdatedEmployeeTable.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250920223700_UpdatedEmployeeTable.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250920223700_UpdatedEmployeeTable.cs",
@@ -747,7 +786,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 40,
+              "DocumentIndex": 43,
               "Title": "20250922232835_UpdateSeedRoles.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250922232835_UpdateSeedRoles.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250922232835_UpdateSeedRoles.cs",
@@ -759,7 +798,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 39,
+              "DocumentIndex": 42,
               "Title": "20250923000609_addRole.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250923000609_addRole.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250923000609_addRole.cs",
@@ -771,7 +810,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 41,
+              "DocumentIndex": 44,
               "Title": "20250919232051_UserTableUpdate.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250919232051_UserTableUpdate.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250919232051_UserTableUpdate.cs",
@@ -783,7 +822,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 43,
+              "DocumentIndex": 46,
               "Title": "20250922232637_UpdateSeedRoles.cs",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\Migrations\\20250922232637_UpdateSeedRoles.cs",
               "RelativeDocumentMoniker": "EMSBackend\\Migrations\\20250922232637_UpdateSeedRoles.cs",
@@ -794,7 +833,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 44,
+              "DocumentIndex": 47,
               "Title": "EMSBackend.csproj",
               "DocumentMoniker": "D:\\dev\\Employee Management System\\backend\\EMSBackend\\EMSBackend.csproj",
               "RelativeDocumentMoniker": "EMSBackend\\EMSBackend.csproj",

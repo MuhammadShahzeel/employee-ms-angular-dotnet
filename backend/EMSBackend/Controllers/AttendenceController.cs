@@ -1,5 +1,7 @@
-﻿using EMSBackend.Interfaces;
+﻿using EMSBackend.Helpers;
+using EMSBackend.Interfaces;
 using EMSBackend.Models;
+using EMSBackend.Repositories;
 using EMSBackend.Services;
 using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Http;
@@ -11,13 +13,14 @@ namespace EMSBackend.Controllers
     [ApiController]
     public class AttendenceController : ControllerBase
     {
-
-private readonly IRepository<Attendence> _attendenceRepo;
+        private readonly IAttendanceRepository _attendenceRepo;
         private readonly IUserContextService _userService;
+        
 
-        public AttendenceController(IRepository<Attendence> attendenceRepo, IUserContextService userService)
+        public AttendenceController(IAttendanceRepository attendenceRepo, IUserContextService userService)
         {
-            _attendenceRepo = attendenceRepo;
+           _attendenceRepo = attendenceRepo;
+            _userService = userService;
             _userService = userService;
         }
 
@@ -40,8 +43,6 @@ private readonly IRepository<Attendence> _attendenceRepo;
                 return BadRequest(new { message = "Already marked present for today." });
                 
             }
-
-
             //If not marked, create new record
             var attendence = new Attendence
             {
@@ -56,6 +57,24 @@ private readonly IRepository<Attendence> _attendenceRepo;
             return Ok(new { message = "Attendance marked as present successfully." });
          
         }
+
+        [HttpGet]
+        [Authorize]
+        public async Task<IActionResult> GetAttendanceHistory([FromQuery] SearchOptions options)
+        {
+            // If not admin, get employee ID from token/user context
+            if (!_userService.IsAdmin(User))
+            {
+                options.EmployeeId = await _userService.GetEmployeeIdFromClaimsAsync(User);
+            }
+
+            var result = await _attendenceRepo.GetAttendanceHistoryAsync(options);
+            return Ok(result);
+        }
+
+
+
+
     }
 }
 
