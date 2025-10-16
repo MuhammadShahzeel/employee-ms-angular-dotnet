@@ -3,6 +3,8 @@ import { inject, Injectable } from '@angular/core';
 import { ApplyLeave, ILeave } from '../types/ILeave';
 import { environment } from '../../environments/environment';
 import { IPagedData } from '../types/IPagedData';
+import { IAttendance } from '../types/IAttendance';
+
 
 @Injectable({
   providedIn: 'root'
@@ -23,7 +25,10 @@ export class Leave {
   return this.http.put(`${environment.apiUrl}/api/Leave/update-leave`, { id,status });
 }
 
-markAttendance() {
-  return this.http.post(`${environment.apiUrl}/api/Attendence/mark-present`,{});
 
-}}
+}
+
+
+
+
+  

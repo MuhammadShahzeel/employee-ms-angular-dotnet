@@ -6,6 +6,9 @@ import { Login } from './pages/login/login';
 import { EmployeeDashboard } from './pages/employee-dashboard/employee-dashboard';
 import { Profile } from './pages/profile/profile';
 import { Leaves } from './pages/leaves/leaves';
+import { Attendance } from './pages/attendance/attendance';
+
+
 
 export const routes: Routes = [
     { path: '', redirectTo: 'dashboard', pathMatch: 'full' },
@@ -25,5 +28,6 @@ export const routes: Routes = [
        { path: 'login', component: Login },
         { path: 'profile', component: Profile },
           { path: 'leaves', component: Leaves },
+          { path: 'attendance', component: Attendance },
 
    ];
