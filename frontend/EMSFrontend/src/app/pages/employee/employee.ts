@@ -2,11 +2,13 @@ import { Component, inject, OnInit } from '@angular/core';
 import { HttpService } from '../../services/http';
 import { FormBuilder, FormControl, FormGroup, ReactiveFormsModule, Validators } from '@angular/forms';
 
-import { LucideAngularModule, Pencil, Trash2, LoaderCircle, X } from 'lucide-angular'; // Loader icon
+import { LucideAngularModule, Pencil, Trash2, LoaderCircle, X, Eye} from 'lucide-angular'; // Loader icon
 
 import { IDepartment } from '../../types/IDepartment';
 import { IEmployee } from '../../types/IEmployee';
 import { debounceTime, distinctUntilChanged } from 'rxjs';
+import { IAttendance } from '../../types/IAttendance';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-employee',
@@ -15,6 +17,11 @@ import { debounceTime, distinctUntilChanged } from 'rxjs';
   styleUrl: './employee.css'
 })
 export class Employee implements OnInit {
+viewAttendance(employeeId: number) {
+
+  this.router.navigateByUrl(`/attendance/${employeeId}`);
+ 
+}
   Math = Math; // ✅ expose Math to your template
 readonly Pencil = Pencil;
   readonly Trash2 = Trash2;
@@ -28,6 +35,7 @@ pageSize : number  = 5;
 totalCount : number  = 0;
 
   httpService = inject(HttpService);
+  router = inject(Router);
   
 
   departments: IDepartment[] = [];
@@ -41,6 +49,7 @@ totalCount : number  = 0;
   editId: number = 0;
   DepartmentName: string = '';
   readonly X = X;
+    readonly Eye = Eye;
 
     openModal() {
     this.isModalOpen = true;

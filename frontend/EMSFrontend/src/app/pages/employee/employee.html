@@ -48,14 +48,29 @@
                 <td class="px-6 py-4 text-gray-700">{{ item.name }}</td>
                 <td class="px-6 py-4 text-gray-700">{{ item.email }}</td>
                 <td class="px-6 py-4 text-gray-700">{{ item.phone }}</td>
-                <td class="px-6 py-4 flex justify-center gap-3">
-                  <button (click)="editEmployee(item)" class="p-2 rounded-lg hover:bg-blue-100 text-blue-600 transition">
-                    <lucide-icon [img]="Pencil" class="w-5 h-5"></lucide-icon>
-                  </button>
-                  <button (click)="deleteEmployee(item.id)" class="p-2 rounded-lg hover:bg-red-100 text-red-600 transition">
-                    <lucide-icon [img]="Trash2" class="w-5 h-5"></lucide-icon>
-                  </button>
-                </td>
+              <td class="px-6 py-4 flex justify-center gap-3">
+  <!-- Edit -->
+  <button (click)="editEmployee(item)" 
+          class="p-2 rounded-lg hover:bg-blue-100 text-blue-600 transition">
+    <lucide-icon [img]="Pencil" class="w-5 h-5"></lucide-icon>
+  </button>
+
+  <!-- Delete -->
+  <button (click)="deleteEmployee(item.id)" 
+          class="p-2 rounded-lg hover:bg-red-100 text-red-600 transition">
+    <lucide-icon [img]="Trash2" class="w-5 h-5"></lucide-icon>
+  </button>
+
+  <!-- View Attendance -->
+  <button (click)="viewAttendance(item.id)" 
+          class="flex items-center gap-2 px-3 py-2 rounded-lg text-sm font-medium
+                 bg-emerald-50 text-emerald-700 border border-emerald-200 
+                 hover:bg-emerald-100 transition">
+    <lucide-icon [img]="Eye" class="w-4 h-4"></lucide-icon>
+    View Attendance
+  </button>
+</td>
+
               </tr>
             }
           </tbody>

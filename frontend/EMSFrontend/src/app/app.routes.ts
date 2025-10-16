@@ -29,5 +29,6 @@ export const routes: Routes = [
         { path: 'profile', component: Profile },
           { path: 'leaves', component: Leaves },
           { path: 'attendance', component: Attendance },
+          { path: 'attendance/:id', component: Attendance },
 
    ];
