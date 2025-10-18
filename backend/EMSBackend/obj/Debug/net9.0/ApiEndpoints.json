@@ -73,6 +73,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMSBackend.Controllers.DashboardController",
+    "Method": "TotalSalary",
+    "RelativePath": "api/Dashboard",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/Department",
