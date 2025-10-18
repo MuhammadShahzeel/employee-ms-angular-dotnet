@@ -12,6 +12,7 @@ import { HttpService } from '../../services/http';
   styleUrl: './profile.css'
 })
 export class Profile implements OnInit {
+  auth = inject(Auth);
   fb = inject(FormBuilder);
   httpService = inject(HttpService);
   authService = inject(Auth);
@@ -52,8 +53,10 @@ export class Profile implements OnInit {
           Validators.minLength(8),
           Validators.pattern(/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*\W).+$/)
         ]
-      ]
+      ],
+      salary :[]
     });
+    
   }
 
   toggleOldPassword() {
@@ -63,6 +66,7 @@ export class Profile implements OnInit {
   toggleNewPassword() {
     this.showNewPassword = !this.showNewPassword;
   }
+  
 
 getProfile() {
 
@@ -117,5 +121,9 @@ getProfile() {
     };
     reader.readAsDataURL(file);
   }
+
+
+
+
 
 }

@@ -118,6 +118,8 @@ getEmployees() {
 
   }
   updateEmployee(){
+      console.log('Update payload:', this.employeeForm.value);
+
     this.httpService.updateEmployee(this.editId,this.employeeForm.value).subscribe({
       next:()=>{
         this.getEmployees();
@@ -190,6 +192,7 @@ onPageChange(newPage: number) {
       joiningDate: ['', Validators.required],
       lastWorkingDate: [''], // optional
       dateOfBirth: ['', Validators.required],
+      salary: [], // new salary field
     });
   
   }
