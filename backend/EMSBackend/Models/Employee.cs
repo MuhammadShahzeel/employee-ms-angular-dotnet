@@ -21,6 +21,7 @@ namespace EMSBackend.Models
         // Foreign key to Identity User
         public string? UserId { get; set; }
         public User? User { get; set; }
+        public int? Salary { get; set; }
 
     }
 }

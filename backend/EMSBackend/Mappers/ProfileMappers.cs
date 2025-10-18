@@ -24,7 +24,8 @@ namespace EMSBackend.Mappers
             {
                 Name = data.employee?.Name,
                 Phone = data.employee?.Phone,
-                ProfileImage = data.user?.ProfileImage
+                ProfileImage = data.user?.ProfileImage,
+                Salary  = data.employee?.Salary
             };
         }
 

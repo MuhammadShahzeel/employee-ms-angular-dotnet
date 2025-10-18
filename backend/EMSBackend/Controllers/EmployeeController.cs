@@ -85,6 +85,7 @@ namespace EMSBackend.Controllers
             employee.Phone = model.Phone;
             employee.LastWorkingDate = model.LastWorkingDate;
             employee.JobTitle = model.JobTitle;
+            employee.Salary = model.Salary;
 
             _employeeRepository.Update(employee);
             await _employeeRepository.SaveChangesAsync();
