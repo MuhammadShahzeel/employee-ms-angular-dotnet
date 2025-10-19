@@ -83,6 +83,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMSBackend.Controllers.DashboardController",
+    "Method": "GetDepartmentData",
+    "RelativePath": "api/Dashboard/department-data",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/Department",
