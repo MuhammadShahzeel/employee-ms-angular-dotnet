@@ -54,5 +54,11 @@ namespace EMSBackend.Repositories
         {
             return await dbSet.FirstOrDefaultAsync(predicate);
         }
+
+        public async Task<IEnumerable<T>> FindAsyncList(Expression<Func<T, bool>> predicate)
+        {
+            return await dbSet.Where(predicate).ToListAsync();
+        }
+
     }
 }

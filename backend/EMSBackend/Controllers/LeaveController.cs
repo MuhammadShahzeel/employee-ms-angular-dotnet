@@ -75,7 +75,7 @@ namespace EMSBackend.Controllers
                     //If not marked, create new record
                     var attendence = new Attendence
                     {
-                        Date = leave.LeaveDate.ToDateTime(TimeOnly.MinValue), //isliye kia q k leavedate DateOnly h jo mene datetime k bajae rkhi th is liye type mismatch sy bachny k liye convert kia
+                        Date = leave.LeaveDate, //isliye kia q k leavedate DateOnly h jo mene datetime k bajae rkhi th is liye type mismatch sy bachny k liye convert kia
                         EmployeeId = leave.EmployeeId,
                         Type = (int)AttendenceType.Leave
                     };

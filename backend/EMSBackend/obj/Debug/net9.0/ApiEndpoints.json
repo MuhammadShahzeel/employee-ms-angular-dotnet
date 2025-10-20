@@ -93,6 +93,16 @@
     "ReturnTypes": []
   },
   {
+    "ContainingType": "EMSBackend.Controllers.DashboardController",
+    "Method": "GetEmployeeOnLeave",
+    "RelativePath": "api/Dashboard/emp-leave-today",
+    "HttpMethod": "GET",
+    "IsController": true,
+    "Order": 0,
+    "Parameters": [],
+    "ReturnTypes": []
+  },
+  {
     "ContainingType": "EMSBackend.Controllers.DepartmentController",
     "Method": "AddDepartment",
     "RelativePath": "api/Department",
